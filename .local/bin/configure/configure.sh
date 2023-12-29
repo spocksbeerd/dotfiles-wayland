@@ -148,7 +148,7 @@ echo "removed /home/.profile"
 rm -f $HOME/software
 echo "removed /home/software"
 mkdir -pv $HOME/.config/git
-mv -v $HOME/.gitconfig $HOME/.config/git/config
+cp -v $HOME/.gitconfig $HOME/.config/git/config
 
 echo -e "${BLUE}Done.${NC}"
 echo -e "${BLUE}Don't forget to add the SSH key to your github account.${NC}"
