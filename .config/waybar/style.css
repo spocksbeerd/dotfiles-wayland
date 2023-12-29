@@ -1,0 +1,88 @@
+* {
+    font-family: monospace;
+    font-size: 16px;
+    min-height: 0;
+    border: none;
+    border-radius: 0px;
+}
+
+window#waybar {
+    background-color: rgba(40, 40, 40, 0.73);
+}
+
+#workspaces {
+    background-color: transparent; 
+}
+
+#workspaces button {
+    color: #ebdbb2;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#workspaces button:hover {
+	background-color: #282828;
+	color: black;
+}
+
+#workspaces button.active {
+    background-color: #98971a;
+    color: #373b41;
+}
+
+#workspaces button.urgent {
+    background-color: #cc241d;
+}
+
+#window,
+#backlight,
+#pulseaudio,
+#memory,
+#cpu,
+#network,
+#clock {
+    color: #ebdbb2;
+    padding-left: 20px;
+}
+
+#window {
+    padding-left: 4px;
+}
+
+#cpu {
+    padding-left: 8px;
+}
+
+#clock {
+    padding-right: 14px;
+}
+
+#custom-powermenu {
+    background-color: #98971a;
+}
+
+#tray {
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+label:focus {
+    background-color: #000000;
+}

@@ -52,7 +52,7 @@ list=$HOME/software
 echo ""
 echo -e "${GREEN}===${WHITE} COPYING DOTFILES ${GREEN}===${NC}"
 echo ""
-git clone --bare https://github.com/spocksbeerd/dotfiles.git $HOME/.dotfiles
+git clone --bare https://github.com/spocksbeerd/dotfiles-wayland.git $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 mv -f $HOME/.config/dotfilesgitconfig $HOME/.dotfiles/config
 
