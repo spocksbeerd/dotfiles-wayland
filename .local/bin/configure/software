@@ -47,7 +47,7 @@ ttf-jetbrains-mono-nerd
 unrar
 unzip
 waybar
-waylock
+swaylock
 wev
 wireplumber
 xdg-desktop-portal-hyprland
@@ -57,3 +57,4 @@ zathura-pdf-mupdf
 zsh
 rofi-lbonn-wayland
 megasync-bin
+swayidle
