@@ -31,7 +31,7 @@ alias du='du -shc'
 alias vim='nvim'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bat='~/.local/bin/battery.sh'
-alias hy='Hyprland'
+alias start='Hyperland'
 
 # Variables
 export EDITOR=/usr/bin/nvim
