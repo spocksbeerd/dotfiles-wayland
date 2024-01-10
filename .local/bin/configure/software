@@ -15,6 +15,7 @@ grim
 gst-plugin-pipewire
 htop
 hyprland
+imv
 intel-ucode
 lf
 libmad
@@ -36,7 +37,6 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
-pqiv
 qbittorrent
 qt5-wayland
 qt6-wayland

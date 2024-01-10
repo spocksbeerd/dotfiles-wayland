@@ -1,0 +1,46 @@
+[options]
+suppress_default_binds = true
+
+[aliases]
+
+[binds]
+q = quit
+
+# Image navigation
+<Left> = prev
+<Right> = next
+gg = goto 1
+<Shift+G> = goto -1
+
+# Panning
+j = pan 0 -20
+k = pan 0 20
+h = pan 20 0
+l = pan -20 0
+c = center
+
+# Zooming
+<minus> = zoom -1
+<equal> = zoom 1
+<BackSpace> = reset
+0 = zoom actual
+
+# Rotation
+r = rotate by 90
+<Shift+R> = rotate by -90
+<bracketright> = rotate by 90
+<bracketleft> = rotate by -90
+<backslash> = flip horizontal 
+
+# Other commands
+f = fullscreen
+i = overlay   #info
+x = close
+
+# Gif playback
+<space> = toggle_playing
+<period> = next_frame
+
+# Slideshow control
+t = slideshow +1
+<Shift+T> = slideshow -1
