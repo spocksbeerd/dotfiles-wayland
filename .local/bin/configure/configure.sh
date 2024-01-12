@@ -150,7 +150,13 @@ echo "removed /home/software"
 mkdir -pv $HOME/.config/git
 cp -v $HOME/.gitconfig $HOME/.config/git/config
 mkdir -pv $HOME/pictures/screenshots
+echo 'gh auth login' >> $HOME/.cache/zsh/history
+echo "pacman -Qe | cut -d' ' -f1 > installed" >> $HOME/.cache/zsh/history
+echo 'pacman -Syy --needed archlinux-keyring' >> $HOME/.cache/zsh/history
+# make the qview configuration immutable
+sudo chattr +i $HOME/.config/qView/qView.conf
 
+echo ""
 echo -e "${BLUE}Done.${NC}"
-echo -e "${BLUE}Don't forget to add the SSH key to your github account.${NC}"
+echo -e "${BLUE}Don't forget to login to github using github cli (gh auth login)${NC}"
 echo -e "${BLUE}You can now reboot.${NC}"
