@@ -17,6 +17,7 @@ gst-plugin-pipewire
 htop
 hyprland
 intel-ucode
+kvantum
 lf
 libmad
 libnotify
@@ -40,6 +41,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 qbittorrent
+qt5ct
 qt5-wayland
 qt6-wayland
 qview

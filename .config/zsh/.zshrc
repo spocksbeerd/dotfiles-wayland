@@ -38,6 +38,7 @@ export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export TERMINAL=/usr/bin/foot
 export BROWSER=/usr/bin/firefox
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 # NVM
 export NVM_DIR=~/.local/share/nvm
