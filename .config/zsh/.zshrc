@@ -54,4 +54,7 @@ source ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 #export NVM_DIR=~/.local/share/nvm
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+# Use node without nvm
+source $HOME/.local/bin/node.sh
+
 #zprof
