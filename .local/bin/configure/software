@@ -42,6 +42,7 @@ pipewire-jack
 pipewire-pulse
 qbittorrent
 qt5ct
+qt5-imageformats 
 qt5-wayland
 qt6-wayland
 qview
