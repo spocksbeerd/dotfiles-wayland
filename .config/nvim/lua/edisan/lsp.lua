@@ -18,6 +18,9 @@ require("lspconfig").lua_ls.setup {
 require("lspconfig").emmet_language_server.setup {}
 require("lspconfig").tsserver.setup {}
 require("lspconfig").pylsp.setup {}
+require("lspconfig").omnisharp.setup {}
+require("lspconfig").eslint.setup {}
+
 
 
 vim.api.nvim_create_autocmd('LspAttach', {
