@@ -15,8 +15,8 @@ opts = {}
 
 
 plugins = {
-    { 
-        "ellisonleao/gruvbox.nvim", 
+    {
+        "ellisonleao/gruvbox.nvim",
         priority = 1000,
         config = function() require('edisan.plugins.gruvbox') end
     },
@@ -38,7 +38,7 @@ plugins = {
     -- snippets
     {
         "L3MON4D3/LuaSnip",
-        version = "v2.*", 
+        version = "v2.*",
         -- install jsregexp (optional!).
         -- build = "make install_jsregexp"
     },
