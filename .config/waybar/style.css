@@ -1,3 +1,5 @@
+@import 'colors.css';
+
 * {
     font-family: monospace;
     font-size: 16px;
@@ -7,7 +9,7 @@
 }
 
 window#waybar {
-    background-color: rgba(40, 40, 40, 0.73);
+    background-color: @waybarbg;
 }
 
 #workspaces {
@@ -15,7 +17,7 @@ window#waybar {
 }
 
 #workspaces button {
-    color: #ebdbb2;
+    color: @foreground;
     padding-top: 4px;
     padding-bottom: 5px;
     padding-left: 8px;
@@ -23,17 +25,17 @@ window#waybar {
 }
 
 #workspaces button:hover {
-	background-color: #282828;
-	color: black;
+	background-color: @background;
+	color: @background;
 }
 
 #workspaces button.active {
-    background-color: #98971a;
-    color: #373b41;
+    background-color: @primarycolor;
+    color: @background;
 }
 
 #workspaces button.urgent {
-    background-color: #cc241d;
+    background-color: @urgent;
 }
 
 #window,
@@ -43,7 +45,7 @@ window#waybar {
 #cpu,
 #network,
 #clock {
-    color: #ebdbb2;
+    color: @foreground;
     padding-left: 20px;
 }
 
@@ -60,7 +62,7 @@ window#waybar {
 }
 
 #custom-powermenu {
-    background-color: #98971a;
+    background-color: @primarycolor;
 }
 
 #tray {
