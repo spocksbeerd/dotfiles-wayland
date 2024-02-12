@@ -14,6 +14,7 @@ git
 github-cli
 grim
 gst-plugin-pipewire
+gvfs
 htop
 hyprland
 intel-ucode
@@ -24,6 +25,7 @@ libnotify
 libpulse
 linux-firmware
 linux-lts
+lxqt-archiver
 man-db
 man-pages
 megasync-bin
@@ -43,6 +45,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+polkit-kde-agent
 qbittorrent
 qt5ct
 qt5-imageformats 
