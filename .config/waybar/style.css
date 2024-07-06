@@ -1,0 +1,90 @@
+@import 'colors.css';
+
+* {
+    font-family: monospace;
+    font-size: 16px;
+    min-height: 0;
+    border: none;
+    border-radius: 0px;
+}
+
+window#waybar {
+    background-color: @background;
+}
+
+#workspaces {
+    background-color: transparent; 
+}
+
+#workspaces button {
+    color: @foreground;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#workspaces button:hover {
+	background-color: @background;
+	color: @background;
+}
+
+#workspaces button.active {
+    background-color: @primarycolor;
+    color: @background;
+}
+
+#workspaces button.urgent {
+    background-color: @urgent;
+}
+
+#window,
+#backlight,
+#pulseaudio,
+#memory,
+#cpu,
+#network,
+#clock {
+    color: @foreground;
+    padding-left: 20px;
+}
+
+#window {
+    padding-left: 4px;
+}
+
+#cpu {
+    padding-left: 8px;
+}
+
+#clock {
+    padding-right: 14px;
+}
+
+#custom-powermenu {
+    background-color: @primarycolor;
+}
+
+#tray {
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+label:focus {
+    background-color: #000000;
+}

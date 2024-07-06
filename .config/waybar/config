@@ -1,0 +1,79 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 20, // Waybar height (to be removed for auto height)
+    "spacing": 0, // Gaps between modules (4px)
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["backlight", "pulseaudio", "network", "memory", "cpu", "clock", "custom/powermenu", "tray"],
+
+    "keyboard-state": {
+        "capslock": true,
+        "format": "{name}",
+    },
+
+    "backlight": {
+        "format": "<span color=\"#98971a\">󰃟 </span>{percent}%",
+        "tooltip": false,
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "<span color=\"#98971a\">󰕾 </span>{volume}%",
+        "format-muted": "<span color=\"#707880\">󰖁 </span>",
+        "on-click": "pavucontrol",
+        "tooltip": false,
+    },
+
+    "network": {
+        "format-wifi": "<span color=\"#98971a\"> </span>{essid}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "<span color=\"#707880\">disconnected</span>",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip": false,
+    },
+
+    "memory": {
+        "format": "<span color=\"#98971a\">󰍛 </span>{}% ",
+        "interval": 2,
+    },
+
+    "cpu": {
+        "format": "<span color=\"#98971a\">󰘚 </span>{usage}%",
+        "interval": 2,
+        "tooltip": false,
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "<span color=\"#98971a\">{:%H:%M}</span>",
+        "format-alt": "{:%Y-%m-%d %H:%M:%S}",
+        "interval": 1,
+    },
+
+    "custom/powermenu": {
+        "format": "<span color=\"#282828\"> 󰚥 </span>",
+        "on-click-right": "~/.local/bin/powermenu.sh",
+        "tooltip": false,
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 5
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+}

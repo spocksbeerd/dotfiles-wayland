@@ -1,0 +1,12 @@
+ignore-empty-password
+color=282828
+bs-hl-color=CC241D
+font=monospace
+font-size=16
+indicator-radius=60
+indicator-thickness=7
+inside-color=181818
+inside-clear-color=FABD2F
+inside-caps-lock-color=D79921
+inside-ver-color=458588
+inside-wrong-color=CC241D
