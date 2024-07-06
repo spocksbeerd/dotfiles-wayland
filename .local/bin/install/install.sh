@@ -98,6 +98,8 @@ echo "moved git config file in /home/.config"
 mkdir -pv $HOME/.cache/zsh
 touch $HOME/.cache/zsh/history
 echo "created zsh history file"
+mkdir $HOME/pictures/screenshots
+echo "created screenshots folder"
 
 echo "pacman -Qe | cut -d' ' -f1 > installed" >> $HOME/.cache/zsh/history
 echo "pacman -Syy --needed archlinux-keyring" >> $HOME/.cache/zsh/history
@@ -110,8 +112,6 @@ sudo chattr +i $HOME/.config/qView/qView.conf
 # laptop specific
 sudo mkdir -pv /etc/X11/xorg.conf.d
 sudo cp -rv $HOME/.local/bin/install/laptop/* /etc/X11/xorg.conf.d
-
-echo "Welcome \r (\l)\n" > /etc/issue
 
 echo ""
 echo -e "${BLUE}DONE.${NC}"
