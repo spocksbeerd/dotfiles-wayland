@@ -100,6 +100,7 @@ echo "created zsh history file"
 mkdir $HOME/pictures/screenshots
 echo "created screenshots folder"
 cp -f $HOME/.config/dotfilesgitconfig $HOME/.local/share/dotfiles/config
+mkdir $HOME/projects
 
 echo "pacman -Qe | cut -d' ' -f1 > installed" >> $HOME/.cache/zsh/history
 echo "pacman -Syy --needed archlinux-keyring" >> $HOME/.cache/zsh/history
@@ -109,13 +110,9 @@ echo "10000 pcmanfm-qt.desktop" > $HOME/.cache/rofi3.druncache
 # make the qview configuration immutable
 sudo chattr +i $HOME/.config/qView/qView.conf
 
-# laptop specific
-sudo mkdir -pv /etc/X11/xorg.conf.d
-sudo cp -rv $HOME/.local/bin/install/laptop/* /etc/X11/xorg.conf.d
-
 echo ""
 echo -e "${BLUE}DONE.${NC}"
 echo -e "${BLUE}Login to github using github cli (gh auth login).${NC}"
-echo -e "${BLUE}Add 'Welcome back \r (\l)' to 'etc/issue'.${NC}"
+echo -e "${BLUE}Add 'Welcome back! \r (\l)' to 'etc/issue'.${NC}"
 echo -e "${BLUE}Edit 'etc/pacman.conf'.${NC}"
 echo -e "${BLUE}You can now reboot.${NC}"
