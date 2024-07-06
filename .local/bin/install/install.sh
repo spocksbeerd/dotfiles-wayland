@@ -32,9 +32,8 @@ git config --global pull.rebase false
 echo ""
 echo -e "${GREEN}===${WHITE} COPYING DOTFILES ${GREEN}===${NC}"
 echo ""
-git clone --bare https://github.com/spocksbeerd/dotfiles.git $HOME/.dotfiles
+git clone --bare https://github.com/spocksbeerd/dotfiles-wayland.git $HOME/.local/share/dotfiles
 git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME checkout
-cp -f $HOME/.config/dotfilesgitconfig $HOME/.local/share/dotfiles/config
 
 echo ""
 echo -e "${GREEN}===${WHITE} INSTALLING ZSH PLUGINS ${GREEN}===${NC}"
@@ -100,6 +99,7 @@ touch $HOME/.cache/zsh/history
 echo "created zsh history file"
 mkdir $HOME/pictures/screenshots
 echo "created screenshots folder"
+cp -f $HOME/.config/dotfilesgitconfig $HOME/.local/share/dotfiles/config
 
 echo "pacman -Qe | cut -d' ' -f1 > installed" >> $HOME/.cache/zsh/history
 echo "pacman -Syy --needed archlinux-keyring" >> $HOME/.cache/zsh/history
