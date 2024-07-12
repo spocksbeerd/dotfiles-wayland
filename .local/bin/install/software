@@ -3,7 +3,9 @@ base-devel
 bc
 bluez
 bluez-utils
+blueman
 brightnessctl
+btop
 chromium
 cliphist
 cmus
@@ -21,7 +23,6 @@ github-cli
 grim
 gst-plugin-pipewire
 gvfs
-htop
 hyprland
 intel-ucode
 jq
