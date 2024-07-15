@@ -51,7 +51,8 @@ export GOPATH="$XDG_DATA_HOME/go"
 # Path
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/bin/autolaunch"
-export PATH="$PATH:/home/edisan/.local/share/dotnet/.dotnet/tools"
+export PATH="$PATH:$HOME.local/share/dotnet/.dotnet/tools"
+export PATH="$PATH:$HOME/.local/share/turso"
 
 # Plugins
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
