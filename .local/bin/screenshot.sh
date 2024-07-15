@@ -3,6 +3,7 @@
 case "$1" in 
     fullscreen)
         grim -t jpeg ~/pictures/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+        dunstify -u low "Screenshot saved" -t 1000
     ;;
 
     selection)
