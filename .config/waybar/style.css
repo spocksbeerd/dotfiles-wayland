@@ -88,3 +88,15 @@ window#waybar {
 label:focus {
     background-color: #000000;
 }
+
+#keyboard-state label {
+    opacity: 0;
+}
+
+#keyboard-state label.locked {
+    opacity: 1;
+    color: @background;
+    background-color: @primarycolor;
+    padding-left: 8px;
+    padding-right: 8px;
+}
