@@ -30,7 +30,7 @@ $HOME/.config/zsh/plugins/installplugins.sh
 echo ""
 echo -e "${GREEN}===${WHITE} INSTALLING SOFTWARE ${GREEN}===${NC}"
 echo ""
-sudo pacman -S --needed --noconfirm - < $HOME/.local/bin/install/software
+sudo pacman -S --needed - < $HOME/.local/bin/install/software
 # node
 git clone https://github.com/nvm-sh/nvm.git $HOME/.local/share/nvm
 export NVM_DIR=~/.local/share/nvm
@@ -71,8 +71,6 @@ ssh-keygen -t ed25519 -C "$email"
 echo ""
 echo -e "${GREEN}===${WHITE} FINISHING TOUCHES ${GREEN}===${NC}"
 echo ""
-rm -rf $HOME/yay
-echo "removed /home/yay"
 rm -rf $HOME/.npm
 echo "removed /home/.npm"
 rm -f $HOME/.bashrc
@@ -95,8 +93,13 @@ touch $HOME/.cache/zsh/history
 echo "created zsh history file"
 mkdir $HOME/pictures/screenshots
 echo "created screenshots folder"
-cp -f $HOME/.config/dotfilesgitconfig $HOME/.local/share/dotfiles/config
 mkdir $HOME/projects
+echo "created projects folder"
+mkdir $HOME/downloads
+echo "created downloads folder"
+mkdir $HOME/documents
+echo "created documents folder"
+cp -f $HOME/.config/dotfilesgitconfig $HOME/.local/share/dotfiles/config
 
 echo "pacman -Qe | cut -d' ' -f1 > installed" >> $HOME/.cache/zsh/history
 echo "pacman -Syy --needed archlinux-keyring" >> $HOME/.cache/zsh/history
@@ -114,6 +117,9 @@ echo ""
 echo -e "${GREEN}===${WHITE} INSTALLING YAY ${GREEN}===${NC}"
 echo ""
 sudo pacman -Syy --needed archlinux-keyring git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+
+rm -rf $HOME/yay
+echo "removed /home/yay"
 
 echo ""
 echo -e "${BLUE}DONE.${NC}"
