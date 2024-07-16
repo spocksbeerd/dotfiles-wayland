@@ -10,23 +10,7 @@ CYAN='\033[1;36m'        # Cyan
 WHITE='\033[1;37m'       # White
 NC='\033[0m'             # Color reset
 
-# git setup
-echo ""
-echo -e "${GREEN}===${WHITE} GIT SETUP ${GREEN}===${NC}"
-echo ""
-
-echo -e "${WHITE}Enter your username:${NC}"
-read name
-echo -e "${WHITE}Enter your email:${NC}"
-read email
-
-sudo pacman -S --needed git
-
-git config --global user.name "$name"
-git config --global user.email "$email"
-git config --global color.ui auto
-git config --global init.defaultBranch main
-git config --global pull.rebase false
+sudo pacman -S --needed --noconfirm git
 
 # dotfiles
 echo ""
@@ -35,22 +19,18 @@ echo ""
 git clone --bare https://github.com/spocksbeerd/dotfiles-wayland.git $HOME/.local/share/dotfiles
 git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME checkout
 
+sleep 5
+
 echo ""
 echo -e "${GREEN}===${WHITE} INSTALLING ZSH PLUGINS ${GREEN}===${NC}"
 echo ""
 $HOME/.config/zsh/plugins/installplugins.sh
 
-# yay
-echo ""
-echo -e "${GREEN}===${WHITE} INSTALLING YAY ${GREEN}===${NC}"
-echo ""
-sudo pacman -Syy --needed archlinux-keyring git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-
 # software
 echo ""
 echo -e "${GREEN}===${WHITE} INSTALLING SOFTWARE ${GREEN}===${NC}"
 echo ""
-yay -S --needed - < $HOME/.local/bin/install/software
+pacman -S --needed --noconfirm - < $HOME/.local/bin/install/software
 # node
 git clone https://github.com/nvm-sh/nvm.git $HOME/.local/share/nvm
 export NVM_DIR=~/.local/share/nvm
@@ -64,6 +44,22 @@ if [ -f /bin/zsh ]; then
     echo ""
     chsh -s /bin/zsh
 fi
+
+# git setup
+echo ""
+echo -e "${GREEN}===${WHITE} GIT SETUP ${GREEN}===${NC}"
+echo ""
+
+echo -e "${WHITE}Enter your username:${NC}"
+read name
+echo -e "${WHITE}Enter your email:${NC}"
+read email
+
+git config --global user.name "$name"
+git config --global user.email "$email"
+git config --global color.ui auto
+git config --global init.defaultBranch main
+git config --global pull.rebase false
 
 # SSH key
 echo ""
@@ -109,6 +105,12 @@ echo "10000 pcmanfm-qt.desktop" > $HOME/.cache/rofi3.druncache
 
 # make the qview configuration immutable
 sudo chattr +i $HOME/.config/qView/qView.conf
+
+# yay
+echo ""
+echo -e "${GREEN}===${WHITE} INSTALLING YAY ${GREEN}===${NC}"
+echo ""
+sudo pacman -Syy --needed archlinux-keyring git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 echo ""
 echo -e "${BLUE}DONE.${NC}"

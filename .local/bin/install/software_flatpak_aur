@@ -2,3 +2,5 @@ flatpak install flathub com.usebottles.bottles
 flatpak install flathub com.leinardi.gwe
 flatpak install flathub net.nokyan.Resources
 flatpak install flathub com.github.tchx84.Flatseal
+qview
+parsec-bin
