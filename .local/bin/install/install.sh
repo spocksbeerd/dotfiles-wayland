@@ -107,7 +107,7 @@ echo "10000 pcmanfm-qt.desktop" > $HOME/.cache/rofi3.druncache
 sudo chattr +i $HOME/.config/qView/qView.conf
 
 # needed group
-gpasswd -a edisan input
+sudo gpasswd -a edisan input
 
 # yay
 echo ""
