@@ -30,7 +30,7 @@ $HOME/.config/zsh/plugins/installplugins.sh
 echo ""
 echo -e "${GREEN}===${WHITE} INSTALLING SOFTWARE ${GREEN}===${NC}"
 echo ""
-pacman -S --needed --noconfirm - < $HOME/.local/bin/install/software
+sudo pacman -S --needed --noconfirm - < $HOME/.local/bin/install/software
 # node
 git clone https://github.com/nvm-sh/nvm.git $HOME/.local/share/nvm
 export NVM_DIR=~/.local/share/nvm
@@ -105,6 +105,9 @@ echo "10000 pcmanfm-qt.desktop" > $HOME/.cache/rofi3.druncache
 
 # make the qview configuration immutable
 sudo chattr +i $HOME/.config/qView/qView.conf
+
+# needed group
+gpasswd -a edisan input
 
 # yay
 echo ""
