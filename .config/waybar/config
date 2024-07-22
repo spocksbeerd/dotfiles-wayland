@@ -55,7 +55,7 @@
 
     "custom/powermenu": {
         "format": "<span color=\"#282828\"> 󰚥 </span>",
-        "on-click-right": "~/.local/bin/powermenu.sh",
+        "on-click": "~/.local/bin/powermenu.sh",
         "tooltip": false,
     },
 
