@@ -6,6 +6,6 @@ case "$option" in
 	"  Restart") reboot ;;
 	"  Shutdown") shutdown now ;;
 	"󰒲  Suspend") systemctl suspend ;;
-	"  Lock") betterlockscreen -l blur ;;
+	"  Lock") lockscreen.sh ;;
 	*) exit 1 ;;
 esac
