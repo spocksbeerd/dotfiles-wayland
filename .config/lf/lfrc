@@ -36,6 +36,7 @@ map au unarchive
 map ds dirselected
 
 map gf cd /run/media/edisan/Storage/Media/Film
+map gb cd ~/.var/app/com.usebottles.bottles/data/bottles/bottles
 
 # run shell script/binary
 map R $"$f"

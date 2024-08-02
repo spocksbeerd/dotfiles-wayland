@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 killall dunst
 dunstdir=~/.config/dunst
