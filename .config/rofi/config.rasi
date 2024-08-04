@@ -1,6 +1,5 @@
 configuration {
-  display-drun: "Run:";
-  display-window: "Windows:";
+  display-drun: "";
   drun-display-format: "{icon} {name}";
   font: "monospace 10";
   modi: "window,run,drun";
@@ -9,7 +8,6 @@ configuration {
 }
 
 @theme "/dev/null"
-
 @import "colors"
 
 * {
@@ -20,56 +18,68 @@ configuration {
 }
 
 window {
+  background-color: @bg;
   width: 400px;
   border: 1;
   border-color: @primary; 
   border-radius: 8;
+  padding: 12;
+}
+
+mainbox {
+  background-color: transparent;
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: transparent;
+  children: [prompt, entry];
+  padding: 0 0 12 0;
+}
+
+prompt {
+  enabled: true;
+  background-color: @bg-alt;
+  padding: 8 23 8 14;
+  text-color: @fg;
+  font: "monospace 18";
+  border-radius: 8 0 0 8;
+}
+
+entry {
+  background-color: @bg-alt;
+  padding: 8 12 8 0;
+  text-color: @fg;
+  font: "monospace bold 10";
+  border-radius: 0 8 8 0;
+  vertical-align: 0.5;
+}
+
+listview {
+  background-color: transparent;
+  columns: 1;
+  lines: 5;
 }
 
 element {
-  padding: 8 0;
+  background-color: transparent;
+  padding: 10 10;
   text-color: @fg-alt;
+  border-radius: 8;
 }
 
 element selected {
+  background-color: @bg-alt;
   text-color: @fg;
 }
 
 element-text {
+  background-color: transparent;
   text-color: inherit;
   vertical-align: 0.5;
 }
 
 element-icon {
-  size: 30;
-  padding: 0 10 0 0;
-}
-
-entry {
-  background-color: @bg-alt;
-  padding: 12;
-  text-color: @fg;
-}
-
-inputbar {
-  children: [prompt, entry];
-}
-
-listview {
-  padding: 8 12;
-  background-color: @bg;
-  columns: 1;
-  lines: 8;
-}
-
-mainbox {
-  background-color: @bg;
-  children: [inputbar, listview];
-}
-
-prompt {
-  background-color: @bg-alt;
-  enabled: true;
-  padding: 12 0 0 12;
-  text-color: @fg;
+  background-color: transparent;
+  size: 32;
 }
