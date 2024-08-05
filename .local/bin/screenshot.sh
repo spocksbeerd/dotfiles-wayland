@@ -1,17 +1,24 @@
 #!/bin/bash
 
+screenshot_path=~/pictures/screenshots/$(date +%Y-%m-%d_%H-%m-%s).png
+
 case "$1" in 
     fullscreen)
-        grim -t jpeg ~/pictures/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
-        dunstify -u low "Screenshot saved" -t 1000
+        grim "$screenshot_path"
     ;;
 
     selection)
-        if ! pgrep -x "slurp" > /dev/null
+        if pgrep -x "slurp" > /dev/null
         then
-            grim -t jpeg -g "$(slurp)" ~/pictures/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+            exit 0
+        else
+            grim -g "$(slurp)" "$screenshot_path"
         fi
     ;;
 esac
 
-paplay "$HOME/.local/share/sfx/screenshot.mp3"
+if [[ $? -eq 0 ]]; then
+    dunstify -u low "Screenshot saved" -t 1000
+    paplay "$HOME/.local/share/sfx/screenshot.mp3"
+    wl-copy < "$screenshot_path"
+fi
