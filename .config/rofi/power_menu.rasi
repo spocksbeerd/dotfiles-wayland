@@ -34,7 +34,7 @@ mainbox {
 listview {
   background-color: transparent;
   columns: 1;
-  lines: 4;
+  lines: 5;
 }
 
 element {
