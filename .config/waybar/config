@@ -27,7 +27,7 @@
     },
 
     "network": {
-        "format-wifi": "<span color=\"#98971a\"> </span>{essid}",
+        "format-wifi": "<span color=\"#98971a\">󰤥 </span>{essid}",
         "format-ethernet": "wired",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "<span color=\"#707880\">disconnected</span>",
