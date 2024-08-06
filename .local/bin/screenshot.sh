@@ -1,24 +1,43 @@
 #!/bin/bash
 
-screenshot_path=~/pictures/screenshots/$(date +%Y-%m-%d_%H-%m-%s).png
+if pgrep -x "slurp" > /dev/null
+then
+    exit 0
+fi
 
-case "$1" in 
-    fullscreen)
-        grim "$screenshot_path"
-    ;;
+screenshot_path=~/pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S-%3N).png
 
-    selection)
-        if pgrep -x "slurp" > /dev/null
-        then
-            exit 0
-        else
-            grim -g "$(slurp)" "$screenshot_path"
-        fi
-    ;;
-esac
+usage() {
+    echo "Usage: screenshot.sh [option]"
+    echo "Options:"
+    echo "  --fullscreen    Take a screenshot of the entire screen"
+    echo "  --selection     Take a screenshot of the selected area"
+    echo "  --help          Show this menu"
+    exit 1
+}
 
-if [[ $? -eq 0 ]]; then
+quality_of_life() {
     dunstify -u low "Screenshot saved" -t 1000
     paplay "$HOME/.local/share/sfx/screenshot.mp3"
     wl-copy < "$screenshot_path"
-fi
+}
+
+case "$1" in 
+    --fullscreen)
+        grim "$screenshot_path"
+        quality_of_life
+        ;;
+    --selection)
+        grim -g "$(slurp)" "$screenshot_path"
+        if [[ $? -eq 0 ]]; then
+            quality_of_life
+        fi
+        ;;
+    --help)
+        usage
+        ;;
+    *)
+        echo "Invalid option: \"$1\"" >&2
+        usage
+        ;;
+esac

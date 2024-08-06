@@ -1,11 +1,21 @@
 #!/bin/bash
 
 if ! command -v pamixer &> /dev/null; then
-    . "$HOME/.local/bin/changevol_fallback.sh" "$1"
+    . "volume_fallback.sh" "$1"
     exit
 fi
 
-step=5
+usage() {
+    echo "Usage: volume.sh [option]"
+    echo "Options:"
+    echo "  --up       Set the sound volume one step higher"
+    echo "  --down     Set the sound volume one step lower"
+    echo "  --mute     Toggle the mute state"
+    echo "  --help     Show this menu"
+    exit 1
+}
+
+STEP=5
 
 unmute() {
     pamixer --unmute
@@ -24,11 +34,11 @@ toggle_mute() {
 }
 
 increase() {
-    pamixer --increase "$step"
+    pamixer --increase "$STEP"
 }
 
 decrease() {
-    pamixer --decrease "$step"
+    pamixer --decrease "$STEP"
 }
 
 notify() {
@@ -37,18 +47,24 @@ notify() {
 }
 
 case "$1" in
-    up)
+    --up)
         unmute
         increase
         notify
-	;;
-
-    down)
+        ;;
+    --down)
         unmute
         decrease
         notify
-	;;
-    mute)
+        ;;
+    --mute)
         toggle_mute
-	;;
+        ;;
+    --help)
+        usage
+        ;;
+    *)
+        echo "Invalid option: \"$1\"" >&2
+        usage
+        ;;
 esac

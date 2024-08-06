@@ -1,5 +1,15 @@
 #!/bin/bash
 
+usage() {
+    echo "Usage: volume_fallback.sh [option]"
+    echo "Options:"
+    echo "  --up       Set the sound volume one step higher"
+    echo "  --down     Set the sound volume one step lower"
+    echo "  --mute     Toggle the mute state"
+    echo "  --help     Show this menu"
+    exit 1
+}
+
 get_volume() {
     pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+(?=%)' | head -n 1
 }
@@ -30,18 +40,24 @@ toggle_mute() {
 }
 
 case "$1" in
-    up)
+    --up)
         set_mute 0
         set_volume +5%
         notify
-	;;
-
-    down)
+        ;;
+    --down)
         set_mute 0
         set_volume -5%
         notify
-	;;
-    mute)
+        ;;
+    --mute)
         toggle_mute
-	;;
+        ;;
+    --help)
+        usage
+        ;;
+    *)
+        echo "Invalid option: \"$1\"" >&2
+        usage
+        ;;
 esac

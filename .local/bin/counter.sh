@@ -5,9 +5,9 @@ file=~/.cache/counter
 usage() {
     echo "Usage: counter [option]"
     echo "Options:"
-    echo "  start     Start the counter"
-    echo "  reveal    Reveal the counter"
-    echo "  help      Show this menu"
+    echo "  --start     Start the counter"
+    echo "  --reveal    Reveal the counter"
+    echo "  --help      Show this menu"
     exit 1
 }
 
@@ -19,11 +19,11 @@ reveal() {
 }
 
 case "$1" in
-    start)
+    --start)
         echo $(date +"%B %d, %H:%M") > $file
         reveal
         ;;
-    reveal)
+    --reveal)
         if [ -e "$file" ];
         then
             reveal
@@ -31,11 +31,12 @@ case "$1" in
             echo "There is no counter set yet."
         fi
         ;;
-    help)
+    --help)
         usage
         ;;
     *)
         echo "Invalid option: \"$1\"" >&2
         echo
         usage
+        ;;
 esac
