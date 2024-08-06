@@ -1,6 +1,6 @@
 #!/bin/bash
 
-file=~/documents/counter
+file=~/.cache/counter
 
 usage() {
     echo "Usage: counter [option]"
