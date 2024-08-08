@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if ! pgrep -x "swaylock" > /dev/null
+lockscreen=swaylock
+
+if ! pgrep -x "$lockscreen" > /dev/null
 then
-    swaylock
+    "$lockscreen"
 fi

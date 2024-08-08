@@ -19,7 +19,7 @@ require("lspconfig").clangd.setup {}
 -- go
 require("lspconfig").gopls.setup {}
 -- csharp
-require("lspconfig").omnisharp.setup {}
+-- require("lspconfig").omnisharp.setup {}
 -- java
 -- require("lspconfig").jdtls.setup {}
 -- python
