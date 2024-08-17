@@ -1,9 +1,9 @@
 #!/bin/bash
 
-option=$(printf "  Restart\n  Shutdown\n󰖔  Suspend\n󰍃  Logout\n  Lock" | rofi -dmenu -config "$XDG_CONFIG_HOME/rofi/power_menu.rasi")
+option=$(printf "  Reboot\n  Shutdown\n󰖔  Suspend\n󰍃  Logout\n  Lock" | rofi -dmenu -config "$XDG_CONFIG_HOME/rofi/power_menu.rasi")
 
 case "$option" in
-	"  Restart") reboot ;;
+	"  Reboot") reboot ;;
 	"  Shutdown") shutdown now ;;
 	"󰖔  Suspend") systemctl suspend ;;
     "󰍃  Logout") pkill -KILL -u "$USER" ;;
