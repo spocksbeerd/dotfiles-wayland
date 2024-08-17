@@ -1,6 +1,6 @@
 #!/bin/bash
 
-lockscreen=swaylock
+lockscreen=hyprlock
 
 if ! pgrep -x "$lockscreen" > /dev/null
 then
