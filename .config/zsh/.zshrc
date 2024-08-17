@@ -29,6 +29,7 @@ alias sesh="tmux_sessionizer.sh"
 alias ff="fastfetch"
 alias calall="cal $(date +"%Y")"
 alias counter="counter.sh"
+alias update="sudo pacman -Syy && yay"
 
 # Variables
 export XDG_CONFIG_HOME="$HOME/.config"
