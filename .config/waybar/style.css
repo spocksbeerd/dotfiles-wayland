@@ -14,12 +14,14 @@ window#waybar {
 
 #workspaces {
     background-color: transparent; 
+    padding-left: 4px;
+    font-weight: bolder;
 }
 
 #workspaces button {
     color: @foreground;
-    padding-top: 4px;
-    padding-bottom: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     padding-left: 7px;
     padding-right: 7px;
 }
@@ -36,6 +38,7 @@ window#waybar {
 
 #workspaces button.urgent {
     background-color: @urgent;
+    color: @background;
 }
 
 #window,
@@ -46,27 +49,36 @@ window#waybar {
 #network,
 #clock {
     color: @foreground;
-    padding-left: 20px;
+}
+
+#backlight,
+#pulseaudio,
+#memory,
+#cpu,
+#network,
+#clock {
+    background-color: #282828;
+    margin: 4px 4px 4px 0px;
+    border-radius: 3px;
+    padding: 0 8px;
 }
 
 #window {
     padding-left: 4px;
 }
 
-#cpu {
-    padding-left: 8px;
-}
-
-#clock {
-    padding-right: 14px;
-}
-
 #custom-powermenu {
     background-color: @primarycolor;
+    margin-right: 3px;
+}
+
+#custom-powermenu:hover {
+    background-color: #282828;
+    color: @foreground;
 }
 
 #tray {
-    padding-right: 4px;
+    padding-right: 6px;
     padding-left: 4px;
 }
 
@@ -96,7 +108,15 @@ label:focus {
 #keyboard-state label.locked {
     opacity: 1;
     color: @background;
-    background-color: @primarycolor;
-    padding-left: 8px;
-    padding-right: 8px;
+    background-color: @urgent;
+    padding: 0 8px;
+    margin: 4px 4px 4px 0;
+    border-radius: 3px;
+    font-weight: bolder;
+}
+
+#workspaces button, #custom-powermenu {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 3px;
 }

@@ -8,6 +8,11 @@
     "modules-center": [],
     "modules-right": ["keyboard-state", "backlight", "pulseaudio", "network", "memory", "cpu", "clock", "custom/powermenu", "tray"],
 
+    "hyprland/window": {
+        "icon": true,
+        "icon-size": 16,
+    },
+
     "keyboard-state": {
         "capslock": true,
         "format": "{name}",
@@ -21,7 +26,7 @@
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
         "format": "<span color=\"#98971a\">󰕾 </span>{volume}%",
-        "format-muted": "<span color=\"#707880\">󰖁 </span>",
+        "format-muted": "<span color=\"#707880\">󰖁</span>",
         "on-click": "pavucontrol",
         "tooltip": false,
     },
@@ -36,7 +41,7 @@
     },
 
     "memory": {
-        "format": "<span color=\"#98971a\">󰍛 </span>{}% ",
+        "format": "<span color=\"#98971a\">󰍛 </span>{}%",
         "interval": 2,
     },
 
@@ -54,13 +59,13 @@
     },
 
     "custom/powermenu": {
-        "format": "<span color=\"#282828\"> 󰚥 </span>",
+        "format": "<span> 󰚥 </span>",
         "on-click": "~/.local/bin/powermenu.sh",
         "tooltip": false,
     },
 
     "tray": {
-        "icon-size": 21,
+        "icon-size": 20,
         "spacing": 5
     },
 
