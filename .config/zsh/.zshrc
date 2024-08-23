@@ -27,7 +27,6 @@ alias vim="nvim"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME"
 alias sesh="tmux_sessionizer.sh"
 alias ff="fastfetch"
-alias calall="cal $(date +"%Y")"
 alias counter="counter.sh"
 alias update="sudo pacman -Syy && yay"
 
