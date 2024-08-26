@@ -26,8 +26,8 @@
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
         "format": "<span color=\"#98971a\">󰕾 </span>{volume}%",
-        "format-muted": "<span color=\"#707880\">󰖁</span>",
-        "on-click": "pavucontrol",
+        "format-muted": "<span color=\"#707880\"> 󰖁 </span>",
+        "on-click": "pamixer -t",
         "tooltip": false,
     },
 
@@ -52,10 +52,30 @@
     },
 
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big><b><span color='#ebdbb2'>{:%Y %B}</span></b></big>\n\n<tt><small>{calendar}</small></tt>",
         "format": "<span color=\"#98971a\">{:%H:%M}</span>",
         "format-alt": "{:%a %d %b <span color=\"#98971a\">|</span> %H<span color=\"#98971a\">:</span>%M<span color=\"#98971a\">:</span>%S}",
         "interval": 1,
+        "calendar": {
+            "mode"          : "month",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#ebdbb2'><b>{}</b></span>",
+                "days":       "<span color='#ebdbb2'><b>{}</b></span>",
+                "weeks":      "<span color='#83a598'><b>W{}</b></span>",
+                "weekdays":   "<span color='#fabd2f'><b>{}</b></span>",
+                "today":      "<span color='#fb4934'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     },
 
     "custom/powermenu": {

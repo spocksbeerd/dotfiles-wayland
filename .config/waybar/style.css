@@ -120,3 +120,14 @@ label:focus {
     margin-bottom: 4px;
     border-radius: 3px;
 }
+
+tooltip {
+    background-color: #282828;
+    border: 1px solid #98971a;
+    border-radius: 5px;
+}
+
+tooltip label {
+    color: #ebdbb2;
+    font-weight: bold;
+}
