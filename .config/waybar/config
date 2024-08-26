@@ -28,16 +28,18 @@
         "format": "<span color=\"#98971a\">󰕾 </span>{volume}%",
         "format-muted": "<span color=\"#707880\"> 󰖁 </span>",
         "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol",
         "tooltip": false,
     },
 
     "network": {
         "format-wifi": "<span color=\"#98971a\">󰤥 </span>{essid}",
         "format-ethernet": "wired",
-        "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "<span color=\"#707880\">disconnected</span>",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "tooltip": false,
+        "tooltip": true,
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "foot bash -c 'sleep 0.1; nmtui'",
     },
 
     "memory": {
