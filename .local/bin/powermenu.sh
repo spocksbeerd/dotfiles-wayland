@@ -1,6 +1,6 @@
 #!/bin/bash
 
-option=$(printf "  Reboot\n  Shutdown\n󰖔  Suspend\n󰍃  Logout\n  Lock" | rofi -dmenu -config "$XDG_CONFIG_HOME/rofi/power_menu.rasi")
+option=$(printf "  Reboot\n  Shutdown\n󰖔  Suspend\n󰍃  Logout\n  Lock" | rofi -dmenu -config "$XDG_CONFIG_HOME/rofi/generic_menu.rasi")
 
 case "$option" in
 	"  Reboot") reboot ;;
