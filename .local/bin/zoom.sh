@@ -18,7 +18,7 @@ ZOOM_STEP=0.2
 MAX_ZOOM=5.0
 MIN_ZOOM=1.0
 
-case $1 in
+case "$1" in
     --in)
         current_zoom="$(get_zoom_factor)"
         new_zoom=$(echo "$current_zoom + $ZOOM_STEP" | bc -l)
