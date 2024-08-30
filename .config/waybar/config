@@ -21,15 +21,17 @@
     "backlight": {
         "format": "<span color=\"#98971a\">󰃟 </span>{percent}%",
         "tooltip": false,
+        "on-click": "brightness.sh",
     },
 
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
         "format": "<span color=\"#98971a\">󰕾 </span>{volume}%",
-        "format-muted": "<span color=\"#707880\"> 󰖁 </span>",
+        "format-muted": "<span color=\"#707880\">󰖁</span>",
         "on-click": "pamixer -t",
         "on-click-right": "pavucontrol",
         "tooltip": false,
+        "scroll-step": 1,
     },
 
     "network": {

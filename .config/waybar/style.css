@@ -63,6 +63,10 @@ window#waybar {
     padding: 0 8px;
 }
 
+#pulseaudio.muted {
+    padding: 0px 10px 0px 8px;
+}
+
 #window {
     padding-left: 4px;
 }
