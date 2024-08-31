@@ -28,7 +28,7 @@ case "$1" in
         quality_of_life
         ;;
     --selection)
-        grim -g "$(slurp)" "$screenshot_path"
+        grim -g "$(slurp -w 1 -b "#00000080" -c "#98971A")" "$screenshot_path"
         if [[ $? -eq 0 ]]; then
             quality_of_life
         fi
