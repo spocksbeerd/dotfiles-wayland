@@ -7,6 +7,7 @@ usage() {
     echo "Options:"
     echo "  --start     Start the counter"
     echo "  --reveal    Reveal the counter"
+    echo "  --clear     Clear the counter"
     echo "  --help      Show this menu"
     exit 1
 }
@@ -30,6 +31,10 @@ case "$1" in
         else
             echo "There is no counter set yet."
         fi
+        ;;
+    --clear)
+        rm $file
+        echo "Counter cleared."
         ;;
     --help)
         usage
