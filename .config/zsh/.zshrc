@@ -28,7 +28,7 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=
 alias sesh="tmux_sessionizer.sh"
 alias ff="fastfetch"
 alias counter="counter.sh"
-alias update="sudo pacman -Syy && yay"
+alias update="sudo pacman -Syy && yay && flatpak update"
 
 # Plugins
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
