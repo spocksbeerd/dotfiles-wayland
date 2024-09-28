@@ -7,7 +7,6 @@ usage() {
     echo "  --out       Zoom out"
     echo "  --reset     Reset the zoom level"
     echo "  --help      Show this menu"
-    exit 1
 }
 
 get_zoom_factor() {
@@ -42,5 +41,6 @@ case "$1" in
     *)
         echo "Invalid option: \"$1\"" >&2
         usage
+        exit 1
         ;;
 esac

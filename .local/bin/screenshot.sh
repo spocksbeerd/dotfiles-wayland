@@ -13,7 +13,6 @@ usage() {
     echo "  --fullscreen    Take a screenshot of the entire screen"
     echo "  --selection     Take a screenshot of the selected area"
     echo "  --help          Show this menu"
-    exit 1
 }
 
 quality_of_life() {
@@ -39,5 +38,6 @@ case "$1" in
     *)
         echo "Invalid option: \"$1\"" >&2
         usage
+        exit 1
         ;;
 esac

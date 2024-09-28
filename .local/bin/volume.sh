@@ -12,7 +12,6 @@ usage() {
     echo "  --down     Set the sound volume one step lower"
     echo "  --mute     Toggle the mute state"
     echo "  --help     Show this menu"
-    exit 1
 }
 
 STEP=5
@@ -66,5 +65,6 @@ case "$1" in
     *)
         echo "Invalid option: \"$1\"" >&2
         usage
+        exit 1
         ;;
 esac

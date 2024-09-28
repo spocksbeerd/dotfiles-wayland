@@ -9,7 +9,6 @@ usage() {
     echo "  --reveal    Reveal the counter"
     echo "  --clear     Clear the counter"
     echo "  --help      Show this menu"
-    exit 1
 }
 
 reveal() {
@@ -43,5 +42,6 @@ case "$1" in
         echo "Invalid option: \"$1\"" >&2
         echo
         usage
+        exit 1
         ;;
 esac

@@ -7,7 +7,6 @@ usage() {
     echo "  --down     Set the sound volume one step lower"
     echo "  --mute     Toggle the mute state"
     echo "  --help     Show this menu"
-    exit 1
 }
 
 get_volume() {
@@ -59,5 +58,6 @@ case "$1" in
     *)
         echo "Invalid option: \"$1\"" >&2
         usage
+        exit 1
         ;;
 esac

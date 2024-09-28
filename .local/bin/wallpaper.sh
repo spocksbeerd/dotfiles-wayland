@@ -6,7 +6,6 @@ usage() {
     echo "  --restore      Apply the last set wallpaper"
     echo "  --set          Set a new wallpaper"
     echo "  --help         Show this menu"
-    exit 1
 }
 
 case "$1" in
@@ -31,5 +30,6 @@ case "$1" in
     *)
         echo "Invalid option: \"$1\"" >&2
         usage
+        exit 1
         ;;
 esac
