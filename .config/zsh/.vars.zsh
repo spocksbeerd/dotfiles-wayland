@@ -1,4 +1,3 @@
-# Path
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/bin/autolaunch"
 export PATH="$PATH:$HOME.local/share/dotnet/.dotnet/tools"
