@@ -6,12 +6,12 @@ usage() {
     echo "Usage: counter [option]"
     echo "Options:"
     echo "  --start     Start the counter"
-    echo "  --reveal    Reveal the counter"
+    echo "  --show      Show the counter"
     echo "  --clear     Clear the counter"
     echo "  --help      Show this menu"
 }
 
-reveal() {
+show() {
     echo
     cat $file
     echo
@@ -21,12 +21,12 @@ reveal() {
 case "$1" in
     --start)
         echo $(date +"%B %d, %H:%M") > $file
-        reveal
+        show
         ;;
-    --reveal)
+    --show)
         if [ -e "$file" ];
         then
-            reveal
+            show
         else
             echo "There is no counter set yet."
         fi

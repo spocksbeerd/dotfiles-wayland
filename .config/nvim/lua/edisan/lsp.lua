@@ -25,7 +25,7 @@ require("lspconfig").gopls.setup {}
 -- python
 -- require("lspconfig").pylsp.setup {}
 -- lsps for frontend web
-require("lspconfig").tsserver.setup {}
+require("lspconfig").ts_ls.setup {}
 require("lspconfig").emmet_language_server.setup {}
 require("lspconfig").eslint.setup {}
 
