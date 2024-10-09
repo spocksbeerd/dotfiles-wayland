@@ -1,4 +1,8 @@
-require('mason').setup()
+require('mason').setup({
+    ui = {
+        border = "rounded",
+    }
+})
 require('mason-lspconfig').setup {
     automatic_installation = true,
 }
@@ -13,21 +17,14 @@ require("lspconfig").lua_ls.setup {
         },
     },
 }
-
--- c/c++
 require("lspconfig").clangd.setup {}
--- go
 require("lspconfig").gopls.setup {}
--- csharp
--- require("lspconfig").omnisharp.setup {}
--- java
--- require("lspconfig").jdtls.setup {}
--- python
--- require("lspconfig").pylsp.setup {}
--- lsps for frontend web
 require("lspconfig").ts_ls.setup {}
 require("lspconfig").emmet_language_server.setup {}
 require("lspconfig").eslint.setup {}
+-- require("lspconfig").omnisharp.setup {}
+-- require("lspconfig").jdtls.setup {}
+-- require("lspconfig").pylsp.setup {}
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -60,7 +57,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- Better visibility for diagnostics
-local _border = "single"
+local _border = "rounded"
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
   vim.lsp.handlers.hover, {

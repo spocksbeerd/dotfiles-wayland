@@ -3,13 +3,8 @@ vim.o.swapfile = false
 -- Case insensitive searching unless capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
-
--- Share the clipboard with the system clipboard
 vim.o.clipboard = 'unnamedplus'
-
--- Remove search highlight
 vim.o.hlsearch = false
-
 vim.o.mouse = "a"
 vim.o.smartindent = true
 vim.o.expandtab = true
