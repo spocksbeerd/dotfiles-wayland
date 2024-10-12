@@ -19,7 +19,7 @@ require("lspconfig").lua_ls.setup {
 }
 require("lspconfig").clangd.setup {}
 require("lspconfig").gopls.setup {}
-require("lspconfig").ts_ls.setup {}
+require("lspconfig").tsserver.setup {}
 require("lspconfig").emmet_language_server.setup {}
 require("lspconfig").eslint.setup {}
 -- require("lspconfig").omnisharp.setup {}
