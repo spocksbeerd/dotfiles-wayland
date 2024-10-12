@@ -73,7 +73,7 @@ local plugins = {
         dependencies = {
             "rafamadriz/friendly-snippets",
         },
-        config = function() require("plugins.luasnip") end,
+        config = function() require("edisan.plugins.luasnip") end,
     },
     {
         'numToStr/Comment.nvim',
