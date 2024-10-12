@@ -12,14 +12,14 @@ require("lspconfig").lua_ls.setup {
         Lua = {
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
-                globals = {'vim'},
+                globals = { 'vim' },
             },
         },
     },
 }
 require("lspconfig").clangd.setup {}
 require("lspconfig").gopls.setup {}
-require("lspconfig").tsserver.setup {}
+require("lspconfig").ts_ls.setup {}
 require("lspconfig").emmet_language_server.setup {}
 require("lspconfig").eslint.setup {}
 -- require("lspconfig").omnisharp.setup {}
@@ -60,29 +60,29 @@ vim.api.nvim_create_autocmd('LspAttach', {
 local _border = "rounded"
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-  vim.lsp.handlers.hover, {
-    border = _border
-  }
+    vim.lsp.handlers.hover, {
+        border = _border
+    }
 )
 
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-  vim.lsp.handlers.signature_help, {
-    border = _border
-  }
+    vim.lsp.handlers.signature_help, {
+        border = _border
+    }
 )
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    -- delay update diagnostics
-    update_in_insert = false,
-  }
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        -- delay update diagnostics
+        update_in_insert = false,
+    }
 )
 
 vim.diagnostic.config({
-  virtual_text = true,
-  float={border=_border}
+    virtual_text = true,
+    float = { border = _border }
 })
 
--- Show line diagnostics automatically when hovering 
+-- Show line diagnostics automatically when hovering
 -- vim.o.updatetime = 250
 -- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
