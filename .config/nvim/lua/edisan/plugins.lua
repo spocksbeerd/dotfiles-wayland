@@ -5,73 +5,76 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
 vim.opt.rtp:prepend(lazypath)
 
-opts = {
+local opts = {
     ui = {
         border = "rounded",
     }
 }
 
-
-plugins = {
+local plugins = {
     {
         "ellisonleao/gruvbox.nvim",
         priority = 1000,
         config = function() require('edisan.plugins.gruvbox') end
     },
-
     {
         "nvim-treesitter/nvim-treesitter",
+        event = "VeryLazy",
         config = function() require('edisan.plugins.treesitter') end
     },
-
     {
         "nvim-lualine/lualine.nvim",
+        event = "VeryLazy",
         config = function() require('edisan.plugins.line') end
     },
-
-    -- completion
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'saadparwaiz1/cmp_luasnip'},
-
-    -- LSP
-    {'neovim/nvim-lspconfig'},
-    {'williamboman/mason.nvim'},
-    {'williamboman/mason-lspconfig.nvim'},
-
-    {
-        'nvim-telescope/telescope.nvim', tag = '0.1.4',
-        dependencies = { 'nvim-lua/plenary.nvim' }
-    },
-
-    -- snippets
-    {
-        "L3MON4D3/LuaSnip",
-        version = "v2.*",
-        -- install jsregexp (optional!).
-        -- build = "make install_jsregexp"
-        dependencies = { "rafamadriz/friendly-snippets" },
-        config = function() require("edisan.plugins.luasnip") end,
-    },
-
-    {
-        'numToStr/Comment.nvim',
-        config = function() require('edisan.plugins.comment') end,
-        lazy = false,
-    },
-
     {
         'nvim-tree/nvim-tree.lua',
         config = function() require('edisan.plugins.nvimtree') end,
     },
     {
+        'hrsh7th/nvim-cmp',
+        event = "InsertEnter",
+        dependencies = {
+            'hrsh7th/cmp-nvim-lsp',
+            'saadparwaiz1/cmp_luasnip',
+        }
+    },
+    {
+        'neovim/nvim-lspconfig',
+        event = "VeryLazy",
+    },
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        event = "VeryLazy",
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+        }
+    },
+    {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        lazy = true,
+        dependencies = {
+            "rafamadriz/friendly-snippets",
+        },
+        config = function() require("edisan.plugins.luasnip") end,
+    },
+    {
+        'numToStr/Comment.nvim',
+        event = 'VeryLazy',
+        config = function() require('edisan.plugins.comment') end,
+    },
+    {
         'lewis6991/gitsigns.nvim',
+        event = 'VeryLazy',
         config = function() require('edisan.plugins.gitsigns') end,
     },
 }
