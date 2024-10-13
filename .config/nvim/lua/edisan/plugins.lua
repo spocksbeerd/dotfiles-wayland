@@ -31,23 +31,6 @@ local plugins = {
         config = function() require('edisan.plugins.treesitter') end,
     },
     {
-        "nvim-lualine/lualine.nvim",
-        event = "VeryLazy",
-        config = function() require('edisan.plugins.line') end,
-    },
-    {
-        'nvim-tree/nvim-tree.lua',
-        config = function() require('edisan.plugins.nvimtree') end,
-    },
-    {
-        'hrsh7th/nvim-cmp',
-        event = "InsertEnter",
-        dependencies = {
-            'hrsh7th/cmp-nvim-lsp',
-            'saadparwaiz1/cmp_luasnip',
-        },
-    },
-    {
         'neovim/nvim-lspconfig',
         event = "VeryLazy",
     },
@@ -67,6 +50,14 @@ local plugins = {
         },
     },
     {
+        'hrsh7th/nvim-cmp',
+        event = "InsertEnter",
+        dependencies = {
+            'hrsh7th/cmp-nvim-lsp',
+            'saadparwaiz1/cmp_luasnip',
+        },
+    },
+    {
         "L3MON4D3/LuaSnip",
         version = "v2.*",
         event = "VeryLazy",
@@ -76,15 +67,24 @@ local plugins = {
         config = function() require("edisan.plugins.luasnip") end,
     },
     {
-        'numToStr/Comment.nvim',
-        event = 'VeryLazy',
-        config = function() require('edisan.plugins.comment') end,
+        "nvim-lualine/lualine.nvim",
+        event = "VeryLazy",
+        config = function() require('edisan.plugins.line') end,
     },
     {
         'lewis6991/gitsigns.nvim',
         event = 'VeryLazy',
         config = function() require('edisan.plugins.gitsigns') end,
     },
+    {
+        'numToStr/Comment.nvim',
+        event = 'VeryLazy',
+        config = function() require('edisan.plugins.comment') end,
+    },
+    -- {
+    --     'nvim-tree/nvim-tree.lua',
+    --     config = function() require('edisan.plugins.nvimtree') end,
+    -- },
 }
 
 require("lazy").setup(plugins, opts)
