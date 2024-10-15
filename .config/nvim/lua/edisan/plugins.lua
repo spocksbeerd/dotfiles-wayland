@@ -24,37 +24,37 @@ local plugins = {
     {
         "ellisonleao/gruvbox.nvim",
         priority = 1000,
-        config = function() require('edisan.plugins.gruvbox') end,
+        config = function() require("edisan.plugins.gruvbox") end,
     },
     {
         "nvim-treesitter/nvim-treesitter",
-        config = function() require('edisan.plugins.treesitter') end,
+        config = function() require("edisan.plugins.treesitter") end,
     },
     {
-        'neovim/nvim-lspconfig',
+        "neovim/nvim-lspconfig",
         event = "VeryLazy",
     },
     {
-        'williamboman/mason.nvim',
+        "williamboman/mason.nvim",
         event = "VeryLazy",
         dependencies = {
-            'williamboman/mason-lspconfig.nvim',
+            "williamboman/mason-lspconfig.nvim",
         },
     },
     {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.8',
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.8",
         event = "VeryLazy",
         dependencies = {
-            'nvim-lua/plenary.nvim',
+            "nvim-lua/plenary.nvim",
         },
     },
     {
-        'hrsh7th/nvim-cmp',
+        "hrsh7th/nvim-cmp",
         event = "VeryLazy",
         dependencies = {
-            'hrsh7th/cmp-nvim-lsp',
-            'saadparwaiz1/cmp_luasnip',
+            "hrsh7th/cmp-nvim-lsp",
+            "saadparwaiz1/cmp_luasnip",
         },
     },
     {
@@ -69,37 +69,33 @@ local plugins = {
     {
         "nvim-lualine/lualine.nvim",
         event = "VeryLazy",
-        config = function() require('edisan.plugins.line') end,
+        config = function() require("edisan.plugins.line") end,
     },
     {
-        'lewis6991/gitsigns.nvim',
-        event = 'VeryLazy',
-        config = function() require('edisan.plugins.gitsigns') end,
+        "lewis6991/gitsigns.nvim",
+        event = "VeryLazy",
+        config = function() require("edisan.plugins.gitsigns") end,
     },
     {
-        'numToStr/Comment.nvim',
-        event = 'VeryLazy',
-        config = function() require('edisan.plugins.comment') end,
+        "numToStr/Comment.nvim",
+        event = "VeryLazy",
+        config = function() require("edisan.plugins.comment") end,
     },
     {
         "rcarriga/nvim-dap-ui",
-        event = 'VeryLazy',
+        event = "VeryLazy",
         dependencies = {
             "mfussenegger/nvim-dap",
             "nvim-neotest/nvim-nio",
         },
-        config = function() require('edisan.plugins.dap') end,
+        config = function() require("edisan.plugins.dap") end,
     },
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
-        event = 'VeryLazy',
-        config = function() require('edisan.plugins.harpoon') end,
+        event = "VeryLazy",
+        config = function() require("edisan.plugins.harpoon") end,
     },
-    -- {
-    --     'nvim-tree/nvim-tree.lua',
-    --     config = function() require('edisan.plugins.nvimtree') end,
-    -- },
 }
 
 require("lazy").setup(plugins, opts)

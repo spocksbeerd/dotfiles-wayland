@@ -3,7 +3,7 @@ vim.o.swapfile           = false
 -- Case insensitive searching unless capital in search
 vim.o.ignorecase         = true
 vim.o.smartcase          = true
-vim.o.clipboard          = 'unnamedplus'
+vim.o.clipboard          = "unnamedplus"
 vim.o.hlsearch           = false
 vim.o.mouse              = "a"
 vim.o.smartindent        = true
