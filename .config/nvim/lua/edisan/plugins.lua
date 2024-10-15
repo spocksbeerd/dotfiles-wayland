@@ -51,7 +51,7 @@ local plugins = {
     },
     {
         'hrsh7th/nvim-cmp',
-        event = "InsertEnter",
+        event = "VeryLazy",
         dependencies = {
             'hrsh7th/cmp-nvim-lsp',
             'saadparwaiz1/cmp_luasnip',
@@ -80,6 +80,21 @@ local plugins = {
         'numToStr/Comment.nvim',
         event = 'VeryLazy',
         config = function() require('edisan.plugins.comment') end,
+    },
+    {
+        "rcarriga/nvim-dap-ui",
+        event = 'VeryLazy',
+        dependencies = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio",
+        },
+        config = function() require('edisan.plugins.dap') end,
+    },
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        event = 'VeryLazy',
+        config = function() require('edisan.plugins.harpoon') end,
     },
     -- {
     --     'nvim-tree/nvim-tree.lua',
