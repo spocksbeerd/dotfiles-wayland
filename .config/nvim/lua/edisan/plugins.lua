@@ -48,6 +48,7 @@ local plugins = {
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
+        config = function() require("edisan.plugins.telescope") end,
     },
     {
         "hrsh7th/nvim-cmp",
