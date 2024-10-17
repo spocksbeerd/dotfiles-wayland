@@ -1,61 +1,64 @@
 configuration {
-  display-drun: "";
-  drun-display-format: "{name}";
-  font: "monospace 10";
-  modi: "window,run,drun";
-  show-icons: true;
-  icon-theme: "Papirus";
+    display-drun: "";
+    drun-display-format: "{name}";
+    font: "monospace 10";
+    modi: "window,run,drun";
+    show-icons: true;
+    icon-theme: "Papirus";
+    entry {
+        max-history: 0;
+    }
 }
 
 @theme "/dev/null"
 @import "colors"
 
 * {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
 }
 
 window {
-  background-color: @bg;
-  width: 400px;
-  border: 1;
-  border-color: @primary; 
-  border-radius: 8;
-  padding: 12;
+    background-color: @bg;
+    width: 400px;
+    border: 1;
+    border-color: @primary; 
+    border-radius: 8;
+    padding: 12;
 }
 
 mainbox {
-  background-color: transparent;
-  children: [listview];
+    background-color: transparent;
+    children: [listview];
 }
 
 listview {
-  background-color: transparent;
-  columns: 1;
-  lines: 5;
+    background-color: transparent;
+    columns: 1;
+    lines: 5;
 }
 
 element {
-  background-color: transparent;
-  padding: 16;
-  text-color: @fg-alt;
-  border-radius: 8;
+    background-color: transparent;
+    padding: 16;
+    text-color: @fg-alt;
+    border-radius: 8;
 }
 
 element selected {
-  background-color: @bg-alt;
-  text-color: @fg;
+    background-color: @bg-alt;
+    text-color: @fg;
 }
 
 element-text {
-  background-color: transparent;
-  text-color: inherit;
-  vertical-align: 0.5;
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
 }
 
 element-icon {
-  background-color: transparent;
-  size: 0;
+    background-color: transparent;
+    size: 0;
 }
