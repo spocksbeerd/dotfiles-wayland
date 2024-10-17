@@ -10,6 +10,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export EDITOR="/usr/bin/nvim"
 export VISUAL="/usr/bin/nvim"
 export PAGER="/usr/bin/less"
+export LESSSECURE=1
 export TERMINAL="/usr/bin/foot"
 export BROWSER="/usr/bin/firefox"
 

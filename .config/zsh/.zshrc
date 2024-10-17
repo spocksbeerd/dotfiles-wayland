@@ -40,5 +40,4 @@ source ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 
 # Use node without nvm
 source $HOME/.local/bin/node.sh
-
 #zprof
