@@ -97,6 +97,11 @@ local plugins = {
         event = "VeryLazy",
         config = function() require("edisan.plugins.harpoon") end,
     },
+    {
+        "folke/trouble.nvim",
+        event = "VeryLazy",
+        config = function() require("edisan.plugins.trouble") end,
+    },
 }
 
 require("lazy").setup(plugins, opts)

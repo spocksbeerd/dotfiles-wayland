@@ -68,6 +68,7 @@ vim.diagnostic.config({
     virtual_text = {
         prefix = "⚑", -- "▎", "■", "x", "●"
     },
+    severity_sort = true,
     float = {
         border = border,
     }
