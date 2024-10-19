@@ -25,6 +25,7 @@ alias s="tmux_sessionizer.sh"
 alias ff="fastfetch"
 alias counter="counter.sh"
 alias update="sudo pacman -Syy && yay && flatpak update"
+alias tree="tree -C"
 
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
