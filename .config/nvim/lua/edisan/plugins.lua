@@ -102,6 +102,10 @@ local plugins = {
         event = "VeryLazy",
         config = function() require("edisan.plugins.trouble") end,
     },
+    {
+        "tpope/vim-fugitive",
+        event = "VeryLazy",
+    },
 }
 
 require("lazy").setup(plugins, opts)
