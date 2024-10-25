@@ -31,11 +31,10 @@ echo ""
 echo -e "${GREEN}===${WHITE} INSTALLING SOFTWARE ${GREEN}===${NC}"
 echo ""
 sudo pacman -S --needed - < $HOME/.local/bin/install/software
-# node
-git clone https://github.com/nvm-sh/nvm.git $HOME/.local/share/nvm
-export NVM_DIR=~/.local/share/nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-nvm install node
+
+# version manager
+git clone https://github.com/asdf-vm/asdf $HOME/.local/share/asdf
+mkdir $HOME/.config/asdf
 
 # change shell
 if [ -f /bin/zsh ]; then

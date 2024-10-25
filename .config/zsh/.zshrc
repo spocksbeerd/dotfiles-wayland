@@ -34,12 +34,5 @@ source ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-# NVM
-# Slows start-up time significantly
-# Uncomment only if you need to install other node versions
-# export NVM_DIR=~/.local/share/nvm
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# Use node without nvm
-source $HOME/.local/bin/node.sh
+source "$XDG_DATA_HOME/asdf/asdf.sh"
 #zprof
