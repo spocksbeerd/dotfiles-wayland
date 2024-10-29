@@ -1,10 +1,16 @@
 [Default Applications]
+inode/directory=pcmanfm-qt.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/http=firefox.desktop
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 image/jpeg=com.interversehq.qView.desktop
 image/jpg=com.interversehq.qView.desktop
 image/png=com.interversehq.qView.desktop
 image/gif=com.interversehq.qView.desktop
 image/webp=com.interversehq.qView.desktop
-inode/directory=pcmanfm-qt.desktop
-x-scheme-handler/https=firefox.desktop
-x-scheme-handler/http=firefox.desktop
+image/svg+xml=com.interversehq.qView.desktop
+image/vnd.microsoft.icon=com.interversehq.qView.desktop
+image/avif=firefox.desktop
+image/bmp=com.interversehq.qView.desktop
+image/tiff=com.interversehq.qView.desktop
+image/heic=com.interversehq.qView.desktop
