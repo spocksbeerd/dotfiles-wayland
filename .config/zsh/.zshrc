@@ -7,7 +7,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.cache/zsh/history
 setopt HIST_IGNORE_SPACE
-setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 
 autoload -U colors && colors
 autoload -U compinit
