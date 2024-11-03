@@ -45,12 +45,12 @@
     },
 
     "memory": {
-        "format": "<span color=\"#98971a\">󰍛 </span>{}%",
+        "format": "<span color=\"#98971a\">󰘚 </span>{}%",
         "interval": 2,
     },
 
     "cpu": {
-        "format": "<span color=\"#98971a\">󰘚 </span>{usage}%",
+        "format": "<span color=\"#98971a\">󰍛 </span>{usage}%",
         "interval": 2,
         "tooltip": false,
     },
