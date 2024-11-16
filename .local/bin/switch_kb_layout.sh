@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kb_name=$(hyprctl devices | awk '/Keyboard at /{getline; keyboard=$0} /main: yes/{print keyboard; exit}' | awk '{print $1}')
+kb_name=$(hyprctl devices -j | jq -r ".keyboards[] | select(.main == true) | .name" )
 hyprctl switchxkblayout "$kb_name" next > /dev/null
-layout=$(hyprctl devices | grep -B 1 "main: yes" | head -n 1 | grep -oP '(?<=active keymap: ).*')
+layout=$(hyprctl devices -j | jq -r ".keyboards[] | select(.main == true) | .active_keymap")
 dunstify -u low -r 1000 "$layout" -t 1000
