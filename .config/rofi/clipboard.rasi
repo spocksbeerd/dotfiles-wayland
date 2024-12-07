@@ -56,6 +56,8 @@ entry {
     font: "monospace bold 10";
     border-radius: 8;
     vertical-align: 0.5;
+    placeholder: "Remove an item with Ctrl + D";
+    placeholder-color: @fg-alt;
 }
 
 listview {
