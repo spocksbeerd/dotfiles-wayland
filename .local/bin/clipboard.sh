@@ -10,7 +10,13 @@ usage() {
 
 case "$1" in 
     --show)
-        cliphist list | rofi -dmenu -config "$XDG_CONFIG_HOME/rofi/clipboard.rasi" | cliphist decode | wl-copy
+        output=$(cliphist list | rofi -kb-remove-char-forward "" -kb-custom-1 "Ctrl+d" -dmenu -display-columns 2 -config "$XDG_CONFIG_HOME/rofi/clipboard.rasi")
+        if [ "$?" -eq 10 ]; then
+            echo "$output" | cliphist delete
+            clipboard.sh --show
+        else
+            echo "$output" | cliphist decode | wl-copy
+        fi
         ;;
     --clear)
         dunstify -u low "Clipboard cleared" -t 1000
