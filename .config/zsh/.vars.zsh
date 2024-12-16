@@ -1,5 +1,6 @@
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/bin/autolaunch"
+export PATH="$PATH:$HOME/.local/bin_extras"
 export PATH="$PATH:$HOME.local/share/dotnet/.dotnet/tools"
 export PATH="$PATH:$HOME/.local/share/turso"
 
