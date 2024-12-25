@@ -59,7 +59,6 @@ papirus-icon-theme
 parsec-bin
 pavucontrol
 pcmanfm-qt
-peaclock
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -69,7 +68,6 @@ qt5-imageformats
 qt5-wayland
 qt5ct
 qt6ct
-qview
 rofi-wayland
 slurp
 sof-firmware
@@ -88,7 +86,6 @@ waybar
 wev
 wireplumber
 xdg-desktop-portal-hyprland
-yay
 yt-dlp
 zathura
 zathura-pdf-mupdf
