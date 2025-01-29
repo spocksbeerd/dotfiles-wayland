@@ -87,6 +87,8 @@ local plugins = {
         event = "VeryLazy",
         dependencies = {
             "mfussenegger/nvim-dap",
+            "leoluz/nvim-dap-go",
+            "theHamsta/nvim-dap-virtual-text",
             "nvim-neotest/nvim-nio",
         },
         config = function() require("edisan.plugins.dap") end,
