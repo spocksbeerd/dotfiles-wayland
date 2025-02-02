@@ -22,6 +22,7 @@ lspconfig.gopls.setup {}
 lspconfig.ts_ls.setup {}
 lspconfig.emmet_language_server.setup {}
 lspconfig.eslint.setup {}
+lspconfig.rust_analyzer.setup {}
 -- lspconfig.omnisharp.setup {}
 -- lspconfig.jdtls.setup {}
 -- lspconfig.pylsp.setup {}
