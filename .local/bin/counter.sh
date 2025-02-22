@@ -11,28 +11,46 @@ usage() {
     echo "  --help      Show this menu"
 }
 
+start() {
+    local count
+    if [ -e "$file" ];
+    then
+        count=$(head -1 "$file")
+        count=$(( count +1 ))
+    else
+        count=1
+    fi
+
+    echo "$count" > "$file"
+    echo $(date +"%B %d, %H:%M") >> "$file"
+}
+
 show() {
+    if [ ! -e "$file" ];
+    then
+        echo "There is no counter set yet."
+        exit 1
+    fi
+
+    count=$(sed -n '1p' "$file")
+    date=$(sed -n '2p' "$file")
     echo
-    cat $file
+    echo "Count: $count"
+    echo "$date"
     echo
     cal -3
 }
 
 case "$1" in
     --start)
-        echo $(date +"%B %d, %H:%M") > $file
+        start
         show
         ;;
     --show)
-        if [ -e "$file" ];
-        then
-            show
-        else
-            echo "There is no counter set yet."
-        fi
+        show
         ;;
     --clear)
-        rm $file
+        rm "$file"
         echo "Counter cleared."
         ;;
     --help)
