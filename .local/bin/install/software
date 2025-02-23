@@ -28,11 +28,11 @@ htop
 hypridle
 hyprland
 hyprlock
+imagemagick
 intel-ucode
 jq
 kvantum
 kvantum-qt5
-lf
 libmad
 libnotify
 libpulse
@@ -85,6 +85,7 @@ waybar
 wev
 wireplumber
 xdg-desktop-portal-hyprland
+yazi
 yt-dlp
 zathura
 zathura-pdf-mupdf

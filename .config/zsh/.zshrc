@@ -19,6 +19,7 @@ _comp_options+=(globdots)  # include hidden files.
 alias start="Hyprland"
 alias ls="ls --color=auto"
 alias l="ls --group-directories-first -la --ignore=.."
+alias lf="yazi"
 alias du="du -shc"
 alias vim="nvim"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME"
