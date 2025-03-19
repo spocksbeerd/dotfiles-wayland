@@ -19,21 +19,21 @@ light = ""
 # : Manager {{{
 
 [manager]
-cwd = { fg = "cyan" }
+cwd = { fg = "green" }
 
 # Hovered
 hovered         = { reversed = true }
 preview_hovered = { underline = true }
 
 # Find
-find_keyword  = { fg = "yellow", bold = true, italic = true, underline = true }
+find_keyword  = { fg = "yellow", bold = true, italic = false, underline = true }
 find_position = { fg = "magenta", bg = "reset", bold = true, italic = true }
 
 # Marker
-marker_copied   = { fg = "lightgreen",  bg = "lightgreen" }
-marker_cut      = { fg = "lightred",    bg = "lightred" }
+marker_copied   = { fg = "yellow",  bg = "yellow" }
+marker_cut      = { fg = "red",    bg = "red" }
 marker_marked   = { fg = "lightcyan",   bg = "lightcyan" }
-marker_selected = { fg = "lightyellow", bg = "lightyellow" }
+marker_selected = { fg = "magenta", bg = "magenta" }
 
 # Tab
 tab_active   = { reversed = true }
@@ -41,9 +41,9 @@ tab_inactive = {}
 tab_width    = 1
 
 # Count
-count_copied   = { fg = "white", bg = "green" }
-count_cut      = { fg = "white", bg = "red" }
-count_selected = { fg = "white", bg = "yellow" }
+count_copied   = { fg = "black", bg = "yellow" }
+count_cut      = { fg = "black", bg = "red" }
+count_selected = { fg = "black", bg = "magenta" }
 
 # Border
 border_symbol = "│"
@@ -86,10 +86,10 @@ progress_normal = { fg = "blue", bg = "black" }
 progress_error  = { fg = "red", bg = "black" }
 
 # Permissions
-perm_sep   = { fg = "darkgray" }
-perm_type  = { fg = "green" }
-perm_read  = { fg = "yellow" }
-perm_write = { fg = "red" }
+perm_sep   = { fg = "gray" }
+perm_type  = { fg = "cyan" }
+perm_read  = { fg = "cyan" }
+perm_write = { fg = "cyan" }
 perm_exec  = { fg = "cyan" }
 
 # : }}}
@@ -188,7 +188,7 @@ icon_command = ""
 [tasks]
 border  = { fg = "blue" }
 title   = {}
-hovered = { fg = "magenta", underline = true }
+hovered = { fg = "green", bold = true, underline = true }
 
 # : }}}
 
