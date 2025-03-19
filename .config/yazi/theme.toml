@@ -36,8 +36,8 @@ marker_marked   = { fg = "lightcyan",   bg = "lightcyan" }
 marker_selected = { fg = "magenta", bg = "magenta" }
 
 # Tab
-tab_active   = { reversed = true }
-tab_inactive = {}
+tab_active   = { fg = "black", bg = "green", bold = true }
+tab_inactive = { fg = "white", bg = "black", bold = true }
 tab_width    = 1
 
 # Count
@@ -59,8 +59,8 @@ syntect_theme = ""
 
 [mode]
 
-normal_main = { bg = "blue", bold = true }
-normal_alt  = { fg = "blue", bg = "gray" }
+normal_main = { fg = "black", bg = "gray", bold = true }
+normal_alt  = { fg = "white", bg = "#504945", bold = false }
 
 # Select mode
 select_main = { bg = "red", bold = true }
@@ -76,7 +76,7 @@ unset_alt  = { fg = "red", bg = "gray" }
 # : Status bar {{{
 
 [status]
-overall         = {}
+overall         = { fg = "gray", bg = "#3C3836" }
 separator_open  = ""
 separator_close = ""
 sep_left = { open = "", close = "" }
