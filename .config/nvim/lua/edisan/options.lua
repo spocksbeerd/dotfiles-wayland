@@ -16,6 +16,7 @@ vim.o.splitright       = true
 vim.o.showmode         = false
 vim.o.swapfile         = false
 vim.o.clipboard        = "unnamedplus"
+vim.o.shada            = ""
 vim.o.colorcolumn      = "80"
 vim.o.signcolumn       = "yes"
 vim.o.mouse            = "a"
