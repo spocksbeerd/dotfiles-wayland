@@ -5,10 +5,10 @@ file=~/.cache/counter
 usage() {
     echo "Usage: counter [option]"
     echo "Options:"
-    echo "  --start     Start the counter"
-    echo "  --show      Show the counter"
-    echo "  --clear     Clear the counter"
-    echo "  --help      Show this menu"
+    echo "  start     Start the counter"
+    echo "  show      Show the counter"
+    echo "  clear     Clear the counter"
+    echo "  help      Show this menu"
 }
 
 start() {
@@ -42,18 +42,18 @@ show() {
 }
 
 case "$1" in
-    --start)
+    start)
         start
         show
         ;;
-    --show)
+    show)
         show
         ;;
-    --clear)
+    clear)
         rm "$file"
         echo "Counter cleared."
         ;;
-    --help)
+    help)
         usage
         ;;
     *)
