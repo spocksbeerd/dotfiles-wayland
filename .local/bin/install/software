@@ -1,3 +1,4 @@
+7zip
 base
 base-devel
 bc
@@ -10,6 +11,7 @@ cliphist
 cmus
 code
 dunst
+easyeffects
 efibootmgr
 fastfetch
 fd
@@ -28,17 +30,20 @@ htop
 hypridle
 hyprland
 hyprlock
+hyprpicker
 imagemagick
 intel-ucode
 jq
 kvantum
 kvantum-qt5
+lf
 libmad
 libnotify
 libpulse
 linux-firmware
 linux-lts
 linux-lts-headers
+lsp-plugins
 lxappearance
 lxqt-archiver
 lxqt-policykit
@@ -53,11 +58,11 @@ noto-fonts
 noto-fonts-emoji
 noto-fonts-extra
 openssh
-p7zip
 pamixer
 papirus-icon-theme
 pavucontrol
 pcmanfm-qt
+perl-image-exiftool
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -71,8 +76,6 @@ rofi-wayland
 slurp
 sof-firmware
 swaybg
-swayidle
-swaylock
 syncthing
 tmux
 tree
@@ -81,6 +84,7 @@ ttf-droid
 ttf-jetbrains-mono-nerd
 unrar
 unzip
+uv
 waybar
 wev
 wireplumber
