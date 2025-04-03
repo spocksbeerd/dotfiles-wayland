@@ -2,9 +2,9 @@
 
 * {
     background-color: @bg;
-    bg: #282828;
-    bg-alt: #3c3836;
-    fg: #ebdbb2;
-    fg-alt: #665c54; 
-    primary: #98971a;
+    bg: #333C43;
+    bg-alt: #434F55;
+    fg: #D3C6AA;
+    fg-alt: #7A8478; 
+    primary: #A7C080;
 }

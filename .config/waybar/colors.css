@@ -1,4 +1,5 @@
-@define-color background #1A1A1A;
-@define-color foreground #EBDBB2;
-@define-color primarycolor #98971a;
-@define-color urgent #D79921;
+@define-color background #272E33;
+@define-color background-alt #333C43;
+@define-color foreground #D3C6AA;
+@define-color primary #A7C080;
+@define-color urgent #DBBC7F;

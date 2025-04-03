@@ -59,8 +59,8 @@ syntect_theme = ""
 
 [mode]
 
-normal_main = { fg = "black", bg = "gray", bold = true }
-normal_alt  = { fg = "white", bg = "#504945", bold = false }
+normal_main = { fg = "black", bg = "#A7C080", bold = true }
+normal_alt  = { fg = "#A7C080", bg = "#4D5960", bold = false }
 
 # Select mode
 select_main = { bg = "red", bold = true }
@@ -76,7 +76,7 @@ unset_alt  = { fg = "red", bg = "gray" }
 # : Status bar {{{
 
 [status]
-overall         = { fg = "gray", bg = "#3C3836" }
+overall         = { fg = "gray", bg = "#3A464C" }
 separator_open  = ""
 separator_close = ""
 sep_left = { open = "", close = "" }

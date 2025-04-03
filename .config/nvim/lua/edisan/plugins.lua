@@ -21,10 +21,15 @@ local opts = {
 }
 
 local plugins = {
+    -- {
+    --     "ellisonleao/gruvbox.nvim",
+    --     priority = 1000,
+    --     config = function() require("edisan.plugins.gruvbox") end,
+    -- },
     {
-        "ellisonleao/gruvbox.nvim",
+        "neanias/everforest-nvim",
         priority = 1000,
-        config = function() require("edisan.plugins.gruvbox") end,
+        config = function() require("edisan.plugins.everforest") end,
     },
     {
         "nvim-treesitter/nvim-treesitter",

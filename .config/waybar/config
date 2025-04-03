@@ -19,14 +19,14 @@
     },
 
     "backlight": {
-        "format": "<span color=\"#98971a\">󰃟 </span>{percent}%",
+        "format": "<span color=\"#A7C080\">󰃟 </span>{percent}%",
         "tooltip": false,
         "on-click": "brightness.sh",
     },
 
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
-        "format": "<span color=\"#98971a\">󰕾 </span>{volume}%",
+        "format": "<span color=\"#A7C080\">󰕾 </span>{volume}%",
         "format-muted": "<span color=\"#707880\">󰖁</span>",
         "on-click": "pamixer -t",
         "on-click-right": "pavucontrol",
@@ -35,7 +35,7 @@
     },
 
     "network": {
-        "format-wifi": "<span color=\"#98971a\">󰤨 </span>{essid}",
+        "format-wifi": "<span color=\"#A7C080\">󰤨 </span>{essid}",
         "format-ethernet": "wired",
         "format-disconnected": "<span color=\"#707880\">disconnected</span>",
         "tooltip": true,
@@ -45,20 +45,20 @@
     },
 
     "memory": {
-        "format": "<span color=\"#98971a\">󰘚 </span>{}%",
+        "format": "<span color=\"#A7C080\">󰘚 </span>{}%",
         "interval": 2,
     },
 
     "cpu": {
-        "format": "<span color=\"#98971a\">󰍛 </span>{usage}%",
+        "format": "<span color=\"#A7C080\">󰍛 </span>{usage}%",
         "interval": 2,
         "tooltip": false,
     },
 
     "clock": {
-        "tooltip-format": "<big><b><span color='#ebdbb2'>{:%Y %B}</span></b></big>\n\n<tt><small>{calendar}</small></tt>",
-        "format": "<span color=\"#98971a\">{:%H:%M}</span>",
-        "format-alt": "{:%a %d %b <span color=\"#98971a\">|</span> %H<span color=\"#98971a\">:</span>%M<span color=\"#98971a\">:</span>%S}",
+        "tooltip-format": "<big><b><span color='#D3C6AA'>{:%Y %B}</span></b></big>\n\n<tt><small>{calendar}</small></tt>",
+        "format": "<span color=\"#A7C080\">{:%H:%M}</span>",
+        "format-alt": "{:%a %d %b <span color=\"#A7C080\">|</span> %H<span color=\"#A7C080\">:</span>%M<span color=\"#A7C080\">:</span>%S}",
         "interval": 1,
         "calendar": {
             "mode"          : "month",
@@ -66,11 +66,11 @@
             "weeks-pos"     : "right",
             "on-scroll"     : 1,
             "format": {
-                "months":     "<span color='#ebdbb2'><b>{}</b></span>",
-                "days":       "<span color='#ebdbb2'><b>{}</b></span>",
-                "weeks":      "<span color='#83a598'><b>W{}</b></span>",
-                "weekdays":   "<span color='#fabd2f'><b>{}</b></span>",
-                "today":      "<span color='#fb4934'><b><u>{}</u></b></span>"
+                "months":     "<span color='#D3C6AA'><b>{}</b></span>",
+                "days":       "<span color='#D3C6AA'><b>{}</b></span>",
+                "weeks":      "<span color='#7FBBB3'><b>W{}</b></span>",
+                "weekdays":   "<span color='#DBBC7F'><b>{}</b></span>",
+                "today":      "<span color='#E67E80'><b><u>{}</u></b></span>"
             }
         },
         "actions":  {

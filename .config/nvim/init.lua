@@ -1,5 +1,6 @@
 require "edisan.options"
 require "edisan.keymaps"
 require "edisan.plugins"
+require "edisan.colorscheme"
 require "edisan.cmp"
 require "edisan.lsp"
