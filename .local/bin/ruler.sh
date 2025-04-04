@@ -5,7 +5,7 @@ then
     exit 0
 fi
 
-output=$(slurp -d -w 1 -b "#00000080" -c "#98971A" -f "width: %w
+output=$(slurp -d -w 1 -b "#00000080" -c "#A7C080" -f "width: %w
 height: %h")
 
 if [[ ! $? -eq 0 ]]; then
