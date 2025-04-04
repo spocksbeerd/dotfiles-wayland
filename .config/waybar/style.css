@@ -19,21 +19,23 @@ window#waybar {
 }
 
 #workspaces button {
+    all: unset;
+    background-color: transparent;
     color: @foreground;
     padding-top: 3px;
     padding-bottom: 3px;
-    padding-left: 7px;
-    padding-right: 7px;
-}
-
-#workspaces button:hover {
-	background-color: @background;
-	color: @background;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #workspaces button.active {
     background-color: @primary;
     color: @background;
+}
+
+#workspaces button:hover {
+    background-color: @background-alt;
+    color: @foreground;
 }
 
 #workspaces button.urgent {
@@ -73,6 +75,7 @@ window#waybar {
 
 #custom-powermenu {
     background-color: @primary;
+    color: @background-alt;
     margin-right: 3px;
 }
 
