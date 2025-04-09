@@ -17,11 +17,11 @@ title_format   = "Yazi: {cwd}"
 [preview]
 wrap            = "no"
 tab_size        = 4
-max_width       = 2000
-max_height      = 2000
+max_width       = 1000
+max_height      = 1000
 cache_dir       = "~/.cache/yazi"
 image_delay     = 30
-image_filter    = "triangle"
+image_filter    = "nearest"
 image_quality   = 50
 sixel_fraction  = 20
 ueberzug_scale  = 1
