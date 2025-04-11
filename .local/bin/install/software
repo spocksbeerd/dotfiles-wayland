@@ -9,9 +9,7 @@ brightnessctl
 btop
 cliphist
 cmus
-code
 dunst
-easyeffects
 efibootmgr
 fastfetch
 fd
@@ -26,7 +24,6 @@ github-cli
 grim
 gst-plugin-pipewire
 gtk4
-htop
 hypridle
 hyprland
 hyprlock
@@ -51,7 +48,6 @@ ly
 man-db
 man-pages
 mpv
-nautilus
 neovim
 networkmanager
 noto-fonts
