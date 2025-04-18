@@ -19,7 +19,7 @@ set_volume() {
     
 notify() {
     volume="$(get_volume)"
-    dunstify -u low -r 2345 -h int:value:"$volume" "Volume: $volume%" -t 2000 
+    notify-send -e -u low -t 2000 -h int:value:"$volume" "Volume: $volume%" -h string:x-canonical-private-synchronous:volume
 }
 
 set_mute() {
@@ -32,7 +32,7 @@ toggle_mute() {
 
     if [ "$mute_state" = "Mute: yes" ];
     then
-        dunstify -u low -r 2345 "Volume: muted" -t 2000
+        notify-send -e -u low -t 2000 "Volume: muted" -h string:x-canonical-private-synchronous:volume
     else
         notify
     fi

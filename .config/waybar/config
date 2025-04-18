@@ -5,12 +5,13 @@
     "spacing": 0, // Gaps between modules (4px)
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": [],
-    "modules-right": ["keyboard-state", "backlight", "pulseaudio", "network", "memory", "cpu", "clock", "custom/powermenu", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["keyboard-state", "backlight", "pulseaudio", "network", "memory", "cpu", "custom/powermenu", "tray"],
 
     "hyprland/window": {
         "icon": true,
         "icon-size": 16,
+        "max-length": 16,
     },
 
     "keyboard-state": {
@@ -57,7 +58,7 @@
 
     "clock": {
         "tooltip-format": "<big><b><span color='#D3C6AA'>{:%Y %B}</span></b></big>\n\n<tt><small>{calendar}</small></tt>",
-        "format": "<span color=\"#A7C080\">{:%H:%M}</span>",
+        "format": "<span color='#A7C080'>{:%H:%M}</span>",
         "format-alt": "{:%a %d %b <span color=\"#A7C080\">|</span> %H<span color=\"#A7C080\">:</span>%M<span color=\"#A7C080\">:</span>%S}",
         "interval": 1,
         "calendar": {

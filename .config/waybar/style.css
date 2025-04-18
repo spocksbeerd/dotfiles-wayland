@@ -43,34 +43,30 @@ window#waybar {
     color: @background;
 }
 
+#clock {
+    font-weight: bold;
+}
+
+#clock,
 #window,
 #backlight,
 #pulseaudio,
 #memory,
 #cpu,
-#network,
-#clock {
+#network {
     color: @foreground;
-}
-
-#backlight,
-#pulseaudio,
-#memory,
-#cpu,
-#network,
-#clock {
     background-color: @background-alt;
     margin: 4px 4px 4px 0px;
     border-radius: 3px;
     padding: 0 8px;
 }
 
-#pulseaudio.muted {
-    padding: 0px 11px 0px 9px;
+#window {
+    background-color: transparent;
 }
 
-#window {
-    padding-left: 4px;
+#pulseaudio.muted {
+    padding: 0px 11px 0px 9px;
 }
 
 #custom-powermenu {
@@ -87,11 +83,6 @@ window#waybar {
 #tray {
     padding-right: 6px;
     padding-left: 4px;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
