@@ -5,14 +5,14 @@
     "layer": "overlay",
     "cssPriority": "user",
 
-    "control-center-width": 350,
+    "control-center-width": 380,
     "control-center-height": 700,
-    "control-center-margin-top": 4,
-    "control-center-margin-bottom": 4,
-    "control-center-margin-right": 4,
+    "control-center-margin-top": 8,
+    "control-center-margin-bottom": 8,
+    "control-center-margin-right": 8,
     "control-center-margin-left": 0,
 
-    "notification-window-width": 350,
+    "notification-window-width": 380,
     "notification-icon-size": 48,
     "notification-body-image-height": 160,
     "notification-body-image-width": 200,
@@ -39,11 +39,9 @@
     "widgets": [
         "buttons-grid",
         "volume",
-        "backlight",
         "mpris",
-        "title",
         "dnd",
-        "label",
+        "title",
         "notifications"
     ],
     "widget-config": {
@@ -84,11 +82,6 @@
             "show-per-app-icon": true,
             "show-per-app-label": false
         },
-        "backlight": {
-            "label": "󰃟 ",
-            "subsystem": "backlight",
-            "device": "amdgpu_bl0"
-        },
         "mpris": {
             "image-size": 96,
             "image-radius": 20
@@ -100,10 +93,6 @@
             "text": "Notifications",
             "clear-all-button": true,
             "button-text": "󰎟"
-        },
-        "label": {
-            "max-lines": 0,
-            "text": " "
         }
     }
 }
