@@ -63,8 +63,22 @@ window#waybar {
 }
 
 #custom-notification {
-    padding-left: 7px;
-    padding-right: 10px;
+    padding-left: 9px;
+    padding-right: 11px;
+}
+
+#custom-notification.notification {
+    padding-right: 5px;
+}
+
+#custom-notification.dnd-none {
+    padding-left: 8px;
+    padding-right: 12px;
+}
+
+#custom-notification.dnd-notification {
+    padding-left: 8px;
+    padding-right: 6px;
 }
 
 #window {
@@ -84,11 +98,6 @@ window#waybar {
 #custom-powermenu:hover {
     background-color: @background-alt;
     color: @foreground;
-}
-
-#custom-notification .notification {
-    background-color: @primary;
-    color: @background-alt;
 }
 
 #tray {

@@ -56,6 +56,11 @@
     color: @surface;
 }
 
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked:hover {
+    background-color: alpha(@active, 0.85);
+    color: @surface;
+}
+
 .widget-volume {
     background-color: @surface;
     padding: 12px 16px;
