@@ -1,97 +1,66 @@
-@define-color rosewater #f5e0dc;
-@define-color flamingo #f2cdcd;
-@define-color pink #f5c2e7;
-@define-color mauve #cba6f7;
-@define-color red #f38ba8;
-@define-color maroon #eba0ac;
-@define-color peach #fab387;
-@define-color yellow #f9e2af;
-@define-color green #A7C080;
-@define-color teal #94e2d5;
-@define-color sky #89dceb;
-@define-color sapphire #74c7ec;
-@define-color blue #89b4fa;
-@define-color lavender #b4befe;
+@define-color black   #333C43;
+@define-color blue    #7FBBB3;
+@define-color cyan    #83C092;
+@define-color green   #A7C080;
+@define-color magenta #D699B6;
+@define-color red     #E67E80;
+@define-color white   #D3C6AA;
+@define-color yellow  #DBBC7F;
 
-@define-color text #D3C6AA;
-
-@define-color base alpha(#272E33, 1);
-@define-color surface alpha(#222222, 1);
-@define-color hover alpha(#ffffff, 0.2);
-@define-color active alpha(alpha(@lavender, 0.5), 0.5);
+@define-color text    #D3C6AA;
+@define-color base    #272E33;
+@define-color surface #333C43;
+@define-color hover   #7A8478;
+@define-color active  @green;
 
 * {
     all: unset;
-    color: @text;
     font-size: 1rem;
     font-weight: 900;
     font-family: JetBrainsMonoNerdFont;
-    transition: 200ms;
+    transition: 120ms;
 }
 
 /* Avoid 'annoying' backgroud */
 .blank-window {
-    background: transparent;
+    background-color: transparent;
 }
 
-/* Buttons menu */
+.control-center {
+    background-color: @base;
+    color: @text;
+    padding: 12px;
+    margin: 0;
+    border: 1px solid @active;
+    border-radius: 12px;
+}
+
 .widget-buttons-grid {
     margin-right: -18px;
     margin-bottom: 12px;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
+    background-color: @surface;
     padding: 12px 32px;
     margin-right: 12px;
-    background: @surface;
-    color: @crust;
     border-radius: 8px;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-    background: @hover;
-    color: @crust;
+    background-color: @hover;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
-    background: @active;
-    color: @crust;
+    background-color: @active;
+    color: @surface;
 }
 
-/* Brightness */
-.widget-backlight {
-    padding: 8px 16px;
-    margin: 0 0 8px 0;
-    border-radius: 20px;
-    background: @surface;
-}
-
-slider {
-}
-
-.widget-backlight label {
-}
-
-.widget-backlight trough {
-    background: @surface;
-    margin: 0 8px;
-}
-
-.widget-backlight trough highlight {
-    background: @active;
-    border: unset;
-}
-
-.widget-backlight button {
-    padding: 0 4px;
-}
-
-/* Volume */
 .widget-volume {
+    background-color: @surface;
     padding: 12px 16px;
     margin-bottom: 12px;
     border-radius: 8px;
-    background: @surface;
 }
 
 slider {
@@ -101,12 +70,12 @@ slider {
 }
 
 .widget-volume trough {
-    background: @surface;
+    background-color: @surface;
     margin: 0 8px;
 }
 
 .widget-volume trough highlight {
-    background: @active;
+    background-color: @active;
     border: unset;
 }
 
@@ -117,56 +86,78 @@ slider {
 }
 
 .per-app-volume {
-  background-color: @noti-bg-alt;
-  padding: 12px 0px 0px 0px;
-  margin: 0px 8px 0px 8px;
-  border-radius: 8px;
+    padding: 12px 0px 0px 0px;
+    margin-right: -8px;
+    border-radius: 8px;
 }
 
-/* Music player */
 @define-color mpris-album-art-overlay rgba(0, 0, 0, 0.7);
-@define-color mpris-button-hover rgba(0, 0, 0, 0.50);
 .widget-mpris {
-    /* background: @surface; */
-    border-radius: 8px;
     margin-bottom: 12px;
+    border-radius: 8px;
 }
 
 .widget-mpris-player {
-  padding: 16px;
-  /* margin: 20px; */
-  background-color: @mpris-album-art-overlay;
-  border-radius: 8px;
-}
-
-.widget-mpris > box > button {
+    background-color: @mpris-album-art-overlay;
+    padding: 16px;
     border-radius: 8px;
-    /* background: @surface; */
-    padding: 4px;
 }
 
 .widget-mpris button {
-    /* background: @active; */
+    padding: 4px;
     border-radius: 8px;
 }
 
 .widget-mpris button:hover {
-    background: @hover;
+    background-color: @hover;
 }
 
 .widget-mpris-album-art {
-    border-radius: 8px;
     margin: 8px 0 0 8px;
+    border-radius: 8px;
 }
 
 .widget-mpris-title {
-    /* font-weight: 700; */
-    /* font-size: 1rem; */
 }
 
 .widget-mpris-subtitle {
-    /* font-weight: 500; */
-    /* font-size: 0.8rem; */
+}
+
+.widget-dnd {
+    margin-bottom: 12px;
+}
+
+.widget-dnd > switch {
+    background-color: @surface;
+    color: @text;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+.widget-dnd > switch:hover {
+    background-color: @hover;
+}
+
+.widget-dnd > switch:hover:checked {
+    background-color: @hover;
+    color: @text;
+}
+
+.widget-dnd > switch:checked {
+    background-color: alpha(@active, 0.2);
+    color: @text;
+}
+
+.widget-dnd > switch slider {
+    background-color: alpha(@hover, 0.2);
+    color: @crust;
+    border: 2px solid alpha(@active, 0.5);
+    border-radius: 8px;
+}
+
+.widget-dnd > switch:checked slider {
+    background-color: alpha(@active, 0.5);
+    border: 2px solid @active;
 }
 
 /* Notification clear button */
@@ -176,74 +167,24 @@ slider {
 }
 
 .widget-title button {
-    background: @surface;
-    border-radius: 8px;
+    background-color: @surface;
     padding: 4px 16px;
+    border-radius: 8px;
 }
 
 .widget-title button:hover {
-    background: @hover;
-}
-
-/* Do not disturb */
-.widget-dnd {
-    margin-bottom: 12px;
-}
-
-.widget-dnd > switch {
-    color: @text;
-    background: @surface;
-    border-radius: 8px;
-    box-shadow: none;
-    padding: 2px;
-}
-
-.widget-dnd > switch:hover {
-    background: @hover;
-    color: @crust;
-}
-
-.widget-dnd > switch:hover:checked {
-    background: @hover;
-    color: @crust;
-}
-
-.widget-dnd > switch:checked {
-    background: @active;
-    color: @crust;
-}
-
-.widget-dnd > switch slider {
-    color: @crust;
-    background: @hover;
-    border-radius: 8px;
-    border: 2px solid @active;
-}
-
-.widget-dnd > switch:checked slider {
-    color: @lavender;
-    background: @active;
-}
-
-/* Buttons */
-
-.control-center {
-    background: @base;
-    border-radius: 12px;
-    border: 1px solid @green;
-    margin: 0;
-    padding: 12px;
+    background-color: @hover;
 }
 
 /* Notifications  */
 .control-center .notification-group {
-    background-color: @lavender;
+    background-color: @surface;
     padding: 12px 12px 0px 12px;
     border-radius: 8px;
 }
 
 .control-center .notification {
-    background-color: @surface;
+    background-color: @base;
     padding: 16px;
     margin-bottom: 12px;
     border-radius: 8px;
@@ -251,13 +192,11 @@ slider {
 
 .control-center .notification.critical {
     color: @red;
-    border-radius: 8px;
-    padding: 8px;
 }
 
 .notification-action {
-    background-color: @surface;
-    border-radius: 20px;
+    background-color: red;
+    border-radius: 8px;
 }
 
 .notification-action:hover {
@@ -265,12 +204,11 @@ slider {
 }
 
 .control-center .notification-row .notification-background .close-button {
-    background: transparent;
-    border-radius: 20px;
-    color: @text;
     background-color: @surface;
-    margin: 0px;
-    padding: 4px;
+    color: @text;
+    padding: 8px;
+    margin: 9px;
+    border-radius: 20px;
 }
 
 .control-center .notification-row .notification-background .close-button:hover {
@@ -280,26 +218,17 @@ slider {
 progressbar,
 progress,
 trough {
-    border-radius: 8px;
-}
-
-progressbar {
-    background-color: @red;
-}
-
-trough {
+    border-radius: 4px;
 }
 
 trough highlight {
     padding: 8px;
-    background: @lavender;
-    border: 2px solid @lavender;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 trough slider {
-    outline: none;
     border: none;
+    outline: none;
 }
 
 trough slider:hover {
@@ -314,6 +243,7 @@ trough slider:hover {
     font-weight: 900;
     font-size: 1.25rem;
     letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
 .notification-group-icon {
@@ -322,23 +252,24 @@ trough slider:hover {
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
-    background: @surface;
-    margin: 4px;
-    border-radius: 20px;
+    background-color: @surface;
     padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 20px;
 }
 
 .notification-group-collapse-button:hover,
 .notification-group-close-all-button:hover {
-    background: @hover;
+    background-color: @hover;
 }
 
 .floating-notifications .notification {
     background-color: @base;
-    border-radius: 12px;
-    border: 1px solid @green;
-    padding: 12px;
+    color: @text;
+    padding: 16px;
     margin: 8px 8px 0px 8px;
+    border: 1px solid @active;
+    border-radius: 12px;
 }
 
 .floating-notifications
@@ -354,7 +285,7 @@ trough slider:hover {
 > *
 .notification-action:hover {
     background-color: @hover;
-    border: 1px solid @lavender;
+    border: 1px solid @active;
 }
 
 .floating-notifications.background
@@ -364,8 +295,8 @@ trough slider:hover {
 > *:last-child
 > *
 .notification-action:active {
-    background-color: @lavender;
-    color: @text;
+    background-color: @active;
+    color: @surface;
 }
 
 .image {
@@ -385,29 +316,34 @@ trough slider:hover {
 .notification-row
 .notification-background
 .close-button {
-    background: transparent;
-    border-radius: 20px;
+    background-color: @surface;
     color: @text;
-    background-color: alpha(#fff, 0.1);
-    margin: 0px;
-    padding: 4px;
+    padding: 8px;
+    margin: 17px 16px;
+    border-radius: 20px;
 }
 
 .floating-notifications.background
 .notification-row
 .notification-background
 .close-button:hover {
-    background-color: @lavender;
+    background-color: @hover;
 }
 
-.floating-notifications.background
-.notification-row
-.notification-background
-.close-button:active {
-    background-color: @lavender;
-    color: @text;
+.floating-notifications progressbar,
+.floating-notifications trough,
+.floating-notifications progress {
+    padding: 5px 0px;
+}
+
+.floating-notifications progressbar {
+    background-color: transparent;
+}
+
+.floating-notifications trough {
+    background-color: @surface;
 }
 
 .floating-notifications progress {
-    background-color: red;
+    background-color: @active;
 }
