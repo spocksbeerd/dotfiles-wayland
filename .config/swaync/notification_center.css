@@ -21,7 +21,7 @@
 @define-color active alpha(alpha(@lavender, 0.5), 0.5);
 
 * {
-    /* all: unset; */
+    all: unset;
     color: @text;
     font-size: 1rem;
     font-weight: 900;
@@ -313,7 +313,7 @@ slider {
 progressbar,
 progress,
 trough {
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 progressbar {
@@ -339,10 +339,7 @@ trough slider:hover {
 }
 
 /* Notifications expanded-group */
-
 .notification-group {
-    all: unset;
-    /* margin: 0 4px 8px 4px; */
     background-color: red;
 }
 
@@ -367,4 +364,81 @@ trough slider:hover {
 .notification-group-collapse-button:hover,
 .notification-group-close-all-button:hover {
     background: @hover;
+}
+.floating-notifications .notification {
+    background: alpha(#000000, 1);
+    border-radius: 12px;
+    border: 1px solid @lavender;
+    padding: 12px;
+}
+
+.floating-notifications
+.notification.critical {
+    border: 1px solid @red;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification
+> *:last-child
+> *
+.notification-action:hover {
+    background-color: @hover;
+    border: 1px solid @lavender;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification
+> *:last-child
+> *
+.notification-action:active {
+    background-color: @lavender;
+    color: @text;
+}
+
+.image {
+    margin: 10px 20px 10px 0px;
+}
+
+.summary {
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.body {
+    font-size: 0.8rem;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.close-button {
+    background: transparent;
+    border-radius: 20px;
+    color: @text;
+    background-color: alpha(#fff, 0.1);
+    margin: 0px;
+    padding: 4px;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.close-button:hover {
+    background-color: @lavender;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.close-button:active {
+    background-color: @lavender;
+    color: @text;
+}
+
+.floating-notifications progress {
+    background-color: red;
 }
