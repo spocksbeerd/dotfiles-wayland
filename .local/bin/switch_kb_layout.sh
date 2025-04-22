@@ -3,4 +3,4 @@
 kb_name=$(hyprctl devices -j | jq -r ".keyboards[] | select(.main == true) | .name" )
 hyprctl switchxkblayout "$kb_name" next > /dev/null
 layout=$(hyprctl devices -j | jq -r ".keyboards[] | select(.main == true) | .active_keymap")
-dunstify -u low -r 1000 "$layout" -t 1000
+notify-send -e -u low "$layout" -t 1000 -h string:x-canonical-private-synchronous:kblayout

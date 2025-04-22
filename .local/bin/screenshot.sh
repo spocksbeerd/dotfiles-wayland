@@ -16,9 +16,12 @@ usage() {
 }
 
 quality_of_life() {
-    dunstify -u low "Screenshot saved" -t 1000
     paplay "$HOME/.local/share/sfx/screenshot.mp3"
     wl-copy < "$screenshot_path"
+    option=$(notify-send "Screenshot saved" -i $screenshot_path -a "Screenshot" -A open="Open" --wait)
+    if [ "$option" = "open" ]; then
+        qview "$screenshot_path" &
+    fi
 }
 
 case "$1" in 

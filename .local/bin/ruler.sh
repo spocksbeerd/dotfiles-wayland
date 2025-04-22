@@ -12,5 +12,5 @@ if [[ ! $? -eq 0 ]]; then
     exit 1
 fi
 
-dunstify -u low "$output" -t 2000
+notify-send -e -u low -t 2000 "$output" -h string:x-canonical-private-synchronous:ruler
 wl-copy "$output"

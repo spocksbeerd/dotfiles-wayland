@@ -55,18 +55,18 @@
                     "update-command": "sh -c '[[ $(nmcli r wifi) == \"enabled\" ]] && echo true || echo false'"
                 },
                 {
-                    "label": "󰖁",
-                    "type": "toggle",
-                    "active": false,
-                    "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && pamixer --mute || paxmier --unmute'",
-                    "update-command": "sh -c '[[ $(pamixer --get-mute) == \"true\" ]] && echo true || echo false'"
-                },
-                {
-                    "label": " ",
+                    "label": "󰂯",
                     "type": "toggle",
                     "active": true,
-                    "command": "amixer set Capture toggle",
-                    "update-command": ""
+                    "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && bluetoothctl power on || bluetoothctl power off'",
+                    "update-command": "sh -c '[[ $(bluetooth.sh) == \"true\" ]] && echo true || echo false'"
+                },
+                {
+                    "label": "󰍬",
+                    "type": "toggle",
+                    "active": true,
+                    "command": "pamixer --default-source --toggle-mute",
+                    "update-command": "sh -c '[[ $(pamixer --default-source --get-mute) == \"true\" ]] && echo false || echo true'"
                 },
                 {
                     "label": "",

@@ -19,7 +19,7 @@ case "$1" in
         fi
         ;;
     --clear)
-        dunstify -u low "Clipboard cleared" -t 1000
+        notify-send -e -u low -t 2000 "Clipboard cleared" -h string:x-canonical-private-synchronous:clipboard
         wl-copy ""
         sleep 0.1
         rm "$XDG_CACHE_HOME/cliphist/db"

@@ -200,7 +200,8 @@ slider {
 }
 
 .notification-action {
-    background-color: red;
+    background-color: @surface;
+    padding: 8px;
     border-radius: 8px;
 }
 
@@ -305,7 +306,8 @@ trough slider:hover {
 }
 
 .image {
-    margin: 10px 20px 10px 0px;
+    margin: 0px 16px 16px 0px;
+    border-radius: 8px;
 }
 
 .summary {
