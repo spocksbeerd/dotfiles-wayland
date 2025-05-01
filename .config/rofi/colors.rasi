@@ -2,8 +2,8 @@
 
 * {
     background-color: @bg;
-    bg: #333C43;
-    bg-alt: #434F55;
+    bg: #272E33;
+    bg-alt: #333C43;
     fg: #D3C6AA;
     fg-alt: #7A8478; 
     primary: #A7C080;
