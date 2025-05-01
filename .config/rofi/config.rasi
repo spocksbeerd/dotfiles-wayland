@@ -43,7 +43,7 @@ inputbar {
 prompt {
     enabled: true;
     background-color: @bg-alt;
-    padding: 8 23 8 14;
+    padding: 8 23 0 14;
     text-color: @fg;
     font: "monospace 18";
     border-radius: 8 0 0 8;
@@ -51,7 +51,7 @@ prompt {
 
 entry {
     background-color: @bg-alt;
-    padding: 8 12 8 0;
+    padding: 16 16 16 0;
     text-color: @fg;
     font: "monospace bold 10";
     border-radius: 0 8 8 0;
