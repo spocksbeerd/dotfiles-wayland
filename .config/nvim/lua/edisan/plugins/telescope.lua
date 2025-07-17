@@ -1,7 +1,7 @@
 require('telescope').setup {
-  defaults = {
-    history = false,
-  },
+    defaults = {
+        history = false,
+    },
 }
 
 local builtin = require("telescope.builtin")

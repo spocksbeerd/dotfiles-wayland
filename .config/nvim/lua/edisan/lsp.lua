@@ -1,31 +1,29 @@
-require("mason").setup({
-    ui = {
-        border = "rounded",
-    }
-})
 require("mason-lspconfig").setup {
-    automatic_installation = true,
+    ensure_installed = {
+        "lua_ls",
+        "gopls",
+        "clangd",
+        "ts_ls",
+        "emmet_language_server",
+        -- "eslint",
+        -- "rust_analyzer",
+        -- "omnisharp",
+        -- "jdtls",
+        -- "pylsp",
+    }
 }
 
-local lspconfig = require("lspconfig")
-lspconfig.lua_ls.setup {
+vim.lsp.config("lua_ls", {
     settings = {
         Lua = {
             diagnostics = {
-                globals = { "vim" },
-            },
-        },
-    },
-}
-lspconfig.clangd.setup {}
-lspconfig.gopls.setup {}
-lspconfig.ts_ls.setup {}
-lspconfig.emmet_language_server.setup {}
-lspconfig.eslint.setup {}
-lspconfig.rust_analyzer.setup {}
--- lspconfig.omnisharp.setup {}
--- lspconfig.jdtls.setup {}
--- lspconfig.pylsp.setup {}
+                globals = {
+                    "vim"
+                }
+            }
+        }
+    }
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -49,22 +47,22 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 local border = "rounded"
+local opts = {
+    max_width = 100,
+    max_height = 14,
+    border = border,
+}
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-    vim.lsp.handlers.hover, {
-        border = border
-    }
-)
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-    vim.lsp.handlers.signature_help, {
-        border = border
-    }
-)
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        update_in_insert = false,
-    }
-)
+local hover = vim.lsp.buf.hover
+vim.lsp.buf.hover = function()
+    return hover(opts)
+end
+
+local signature_help = vim.lsp.buf.signature_help
+vim.lsp.buf.signature_help = function()
+    return signature_help(opts)
+end
+
 vim.diagnostic.config({
     virtual_text = {
         prefix = "⚑", -- "▎", "■", "x", "●"
@@ -94,12 +92,6 @@ vim.diagnostic.config({
         },
     },
 })
-
--- local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
--- for type, icon in pairs(signs) do
---     local hl = "DiagnosticSign" .. type
---     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
--- end
 
 -- Show line diagnostics automatically when hovering
 -- vim.o.updatetime = 250

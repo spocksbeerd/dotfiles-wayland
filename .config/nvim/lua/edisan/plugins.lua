@@ -17,15 +17,11 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {
     ui = {
         border = "rounded",
+        backdrop = 100,
     }
 }
 
 local plugins = {
-    -- {
-    --     "ellisonleao/gruvbox.nvim",
-    --     priority = 1000,
-    --     config = function() require("edisan.plugins.gruvbox") end,
-    -- },
     {
         "neanias/everforest-nvim",
         priority = 1000,
@@ -36,15 +32,23 @@ local plugins = {
         config = function() require("edisan.plugins.treesitter") end,
     },
     {
-        "neovim/nvim-lspconfig",
+        "williamboman/mason-lspconfig.nvim",
         event = "VeryLazy",
+        dependencies = {
+            "neovim/nvim-lspconfig",
+        }
     },
     {
         "williamboman/mason.nvim",
         event = "VeryLazy",
-        dependencies = {
-            "williamboman/mason-lspconfig.nvim",
-        },
+        opts = {
+            ui = {
+                border = "rounded",
+                backdrop = 100,
+                height = 0.8,
+                width = 0.8,
+            }
+        }
     },
     {
         "nvim-telescope/telescope.nvim",
