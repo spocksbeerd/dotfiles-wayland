@@ -104,7 +104,7 @@ slider {
 
 .widget-mpris-player {
     background-color: @mpris-album-art-overlay;
-    padding: 16px;
+    padding: 12px;
     border-radius: 8px;
 }
 
@@ -120,6 +120,10 @@ slider {
 .widget-mpris-album-art {
     margin: 8px 0 0 8px;
     border-radius: 8px;
+}
+
+.mpris-background {
+    filter: blur(16px);
 }
 
 .widget-mpris-title {
