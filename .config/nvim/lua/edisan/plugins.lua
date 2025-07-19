@@ -117,6 +117,15 @@ local plugins = {
         "tpope/vim-fugitive",
         event = "VeryLazy",
     },
+    {
+        "https://github.com/rcarriga/nvim-notify",
+        opts = {
+            stages = "static",
+        },
+        init = function ()
+            vim.notify = require("notify")
+        end,
+    },
 }
 
 require("lazy").setup(plugins, opts)
