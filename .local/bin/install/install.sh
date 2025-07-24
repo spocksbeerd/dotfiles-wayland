@@ -98,6 +98,8 @@ mkdir $HOME/downloads
 echo "created downloads folder"
 mkdir $HOME/documents
 echo "created documents folder"
+mkdir $HOME/.local/bin-extras
+touch $HOME/.local/bin-extras/machine-specific-hotkeys.conf"
 cp -f $HOME/.config/dotfilesgitconfig $HOME/.local/share/dotfiles/config
 
 echo "pacman -Qe | cut -d' ' -f1 > installed" >> $HOME/.cache/zsh/history
