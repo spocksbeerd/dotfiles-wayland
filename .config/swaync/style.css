@@ -100,6 +100,7 @@ slider {
 .widget-mpris {
     margin-bottom: 12px;
     border-radius: 8px;
+    text-shadow: 1px 1px black;
 }
 
 .widget-mpris-player {
