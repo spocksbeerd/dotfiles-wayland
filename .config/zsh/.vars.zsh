@@ -11,7 +11,7 @@ export BROWSER="/usr/bin/firefox"
 
 export XINITRC="$XDG_CONFIG_HOME/xinitrc"
 export QT_QPA_PLATFORMTHEME=qt5ct
-export QT5_STYLE_OVERRIDE=kvantum
+# export QT5_STYLE_OVERRIDE=kvantum
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 
 export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
