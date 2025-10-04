@@ -32,10 +32,6 @@ echo -e "${GREEN}===${WHITE} INSTALLING SOFTWARE ${GREEN}===${NC}"
 echo ""
 sudo pacman -S --needed - < $HOME/.local/bin/install/software
 
-# version manager
-git clone https://github.com/asdf-vm/asdf $HOME/.local/share/asdf
-mkdir $HOME/.config/asdf
-
 # change shell
 if [ -f /bin/zsh ]; then
     echo ""
@@ -99,8 +95,11 @@ echo "created downloads folder"
 mkdir $HOME/documents
 echo "created documents folder"
 mkdir $HOME/.local/bin-extras
-touch $HOME/.local/bin-extras/machine-specific-hotkeys.conf"
+touch $HOME/.local/bin-extras/machine-specific-hotkeys.conf
 cp -f $HOME/.config/dotfilesgitconfig $HOME/.local/share/dotfiles/config
+
+# version manager
+curl https://mise.run | MISE_INSTALL_PATH=~/.local/bin-extras/mise sh
 
 echo "pacman -Qe | cut -d' ' -f1 > installed" >> $HOME/.cache/zsh/history
 echo "pacman -Syy --needed archlinux-keyring" >> $HOME/.cache/zsh/history

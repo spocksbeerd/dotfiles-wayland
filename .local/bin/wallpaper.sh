@@ -11,7 +11,7 @@ usage() {
 case "$1" in
     --restore)
         current_wallpaper=$(cat "$HOME/.cache/wallpaper")
-        swaybg -i "$HOME/pictures/wallpapers/$current_wallpaper" &
+        swaybg -m fill -i "$HOME/pictures/wallpapers/$current_wallpaper" &
         ;;
     --set)
         wallpaper=$(ls "$HOME/pictures/wallpapers" | rofi -dmenu -config "$XDG_CONFIG_HOME/rofi/generic_menu.rasi")
@@ -21,7 +21,7 @@ case "$1" in
         fi
 
         pkill swaybg
-        swaybg -i "$HOME/pictures/wallpapers/$wallpaper" &
+        swaybg -m fill -i "$HOME/pictures/wallpapers/$wallpaper" &
         echo "$wallpaper" > "$HOME/.cache/wallpaper"
         ;;
     --help)

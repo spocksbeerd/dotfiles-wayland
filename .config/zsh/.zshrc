@@ -35,5 +35,5 @@ source ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-source "$XDG_DATA_HOME/asdf/asdf.sh"
+eval "$(mise activate zsh)"
 #zprof

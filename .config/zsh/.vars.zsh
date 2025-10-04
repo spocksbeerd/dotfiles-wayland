@@ -20,9 +20,6 @@ export GOPATH="$XDG_DATA_HOME/go"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
-export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf/data"
-export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME=".config/asdf/.tool-versions"
-
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/bin/autolaunch"
 export PATH="$PATH:$HOME/.local/bin-extras"
