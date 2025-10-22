@@ -54,6 +54,8 @@ window#waybar {
 #memory,
 #cpu,
 #network,
+#battery,
+#temperature,
 #custom-notification {
     color: @foreground;
     background-color: @background-alt;

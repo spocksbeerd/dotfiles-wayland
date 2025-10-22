@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["keyboard-state", "backlight", "pulseaudio", "network", "memory", "cpu", "custom/notification", "tray"],
+    "modules-right": ["keyboard-state", "backlight", "pulseaudio", "network", "battery", "temperature", "memory", "cpu", "custom/notification", "tray"],
 
     "hyprland/window": {
         "icon": true,
@@ -121,10 +121,21 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": [
+            "<span color=\"#E67E80\"></span>",
+            "<span color=\"#DBBC7F\"></span>",
+            "<span color=\"#A7C080\"></span>",
+            "<span color=\"#A7C080\"></span>",
+            "<span color=\"#A7C080\"></span>"
+        ]
+    },
+
+    "temperature": {
+        "thermal-zone": 0,
+        "format": "{temperatureC}°C"
     },
 }
