@@ -11,17 +11,17 @@ usage() {
 case "$1" in
     --restore)
         current_wallpaper=$(cat "$HOME/.cache/wallpaper")
-        swaybg -m fill -i "$HOME/pictures/wallpapers/$current_wallpaper" &
+        swaybg -m fill -i "$HOME/Pictures/wallpapers/$current_wallpaper" &
         ;;
     --set)
-        wallpaper=$(ls "$HOME/pictures/wallpapers" | rofi -dmenu -config "$XDG_CONFIG_HOME/rofi/generic_menu.rasi")
+        wallpaper=$(ls "$HOME/Pictures/wallpapers" | rofi -dmenu -config "$XDG_CONFIG_HOME/rofi/generic_menu.rasi")
 
         if [ "$wallpaper" = "" ]; then
             exit 1
         fi
 
         pkill swaybg
-        swaybg -m fill -i "$HOME/pictures/wallpapers/$wallpaper" &
+        swaybg -m fill -i "$HOME/Pictures/wallpapers/$wallpaper" &
         echo "$wallpaper" > "$HOME/.cache/wallpaper"
         ;;
     --help)

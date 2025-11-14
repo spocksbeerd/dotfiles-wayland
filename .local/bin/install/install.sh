@@ -86,14 +86,18 @@ echo "moved git config file in /home/.config"
 mkdir -pv $HOME/.cache/zsh
 touch $HOME/.cache/zsh/history
 echo "created zsh history file"
-mkdir $HOME/pictures/screenshots
+mkdir $HOME/Pictures/screenshots
 echo "created screenshots folder"
-mkdir $HOME/projects
+mkdir $HOME/Projects
 echo "created projects folder"
-mkdir $HOME/downloads
+mkdir $HOME/Downloads
 echo "created downloads folder"
-mkdir $HOME/documents
+mkdir $HOME/Documents
 echo "created documents folder"
+mkdir $HOME/Music
+echo "created music folder"
+mkdir $HOME/Videos
+echo "created videos folder"
 mkdir $HOME/.local/bin-extras
 touch $HOME/.local/bin-extras/machine-specific-hotkeys.conf
 cp -f $HOME/.config/dotfilesgitconfig $HOME/.local/share/dotfiles/config
@@ -110,7 +114,7 @@ echo "10000 pcmanfm-qt.desktop" > $HOME/.cache/rofi3.druncache
 sudo chattr +i $HOME/.config/qView/qView.conf
 
 # needed group
-sudo gpasswd -a edisan input
+sudo gpasswd -a "$(whoami)" input
 
 # yay
 echo ""
@@ -122,8 +126,7 @@ rm -rf $HOME/yay
 echo "removed /home/yay"
 
 echo ""
-echo -e "${BLUE}DONE.${NC}"
+echo -e "${BLUE}Finished.${NC}"
 echo -e "${BLUE}Login to github using github cli (gh auth login).${NC}"
-echo -e "${BLUE}Add 'Welcome back! \r (\l)' to 'etc/issue'.${NC}"
 echo -e "${BLUE}Edit 'etc/pacman.conf'.${NC}"
 echo -e "${BLUE}You can now reboot.${NC}"

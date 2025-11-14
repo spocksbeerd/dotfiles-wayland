@@ -5,7 +5,7 @@ then
     exit 0
 fi
 
-screenshot_path=~/pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S-%3N).png
+screenshot_path=~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S-%3N).png
 
 usage() {
     echo "Usage: screenshot.sh [option]"
