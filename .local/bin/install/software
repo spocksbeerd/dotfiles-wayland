@@ -1,4 +1,5 @@
 7zip
+amd-ucode
 base
 base-devel
 bc
@@ -10,7 +11,9 @@ brightnessctl
 btop
 cliphist
 cmus
+cosmic-store
 dosfstools
+dysk
 efibootmgr
 fastfetch
 fd
@@ -25,12 +28,13 @@ github-cli
 grim
 gst-plugin-pipewire
 gtk4
+gvfs
+htop
 hypridle
 hyprland
 hyprlock
 hyprpicker
 imagemagick
-intel-ucode
 jq
 kvantum
 kvantum-qt5
@@ -46,7 +50,10 @@ lxqt-archiver
 lxqt-policykit
 man-db
 man-pages
+mpc
+mpd
 mpv
+nautilus
 neovim
 network-manager-applet
 networkmanager
@@ -69,8 +76,10 @@ qt5-imageformats
 qt5-wayland
 qt5ct
 qt6ct
+qview
 ripgrep
-rofi-wayland
+rmpc
+rofi
 sddm
 slurp
 sof-firmware
@@ -90,6 +99,8 @@ wev
 wireplumber
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
+yay
+yay-debug
 yazi
 yt-dlp
 zathura
