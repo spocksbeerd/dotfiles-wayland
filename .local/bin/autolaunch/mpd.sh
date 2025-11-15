@@ -1,4 +1,4 @@
 #!/bin/bash
 
 mpd --kill
-[ ! -s ~/.config/mpd/pid ] && mpd
+[ ! -s ~/.local/state/mpd/pid ] && mpd
