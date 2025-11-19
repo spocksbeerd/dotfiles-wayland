@@ -140,45 +140,23 @@
         album_sort_by: Date,
     ),
     tabs: [
-    (
-           name: "Queue",
-           pane: Split(
-               direction: Horizontal,
-               panes: [
-                   (
-                       size: "25%",
-                       pane: Split(
-                           direction: Vertical,
-                           panes: [
-                               (
-                                   size: "55%",
-                                   pane: Pane(AlbumArt),
-                                   borders: "ALL",
-                               ),
-                               (
-                                   size: "45%",
-                                   borders: "ALL",
-                                   pane: Pane(Cava)
-                               )
-                           ]
-                       )
-                   ),
-                   (
-                       size: "75%",
-                       pane: Split(
-                           direction: Vertical,
-                           panes: [
-                               (
-                                   size: "100%",
-                                   pane: Pane(Queue),
-                                   borders: "ALL",
-                               ),
-                           ]
-                       )
-                   )
-               ],
-           ),
-       ),
+        (
+            name: "Queue",
+            pane: Split(
+                direction: Horizontal,
+                panes: [
+                    (
+                        size: "25%",
+                        pane: Pane(AlbumArt),
+                    ),
+                    (
+                        size: "75%",
+                        pane: Pane(Queue),
+                        borders: "LEFT",
+                    ),
+                ],
+            ),
+        ),
         (
             name: "Directories",
             pane: Pane(Directories),

@@ -81,13 +81,21 @@
         ),
     ],
     components: {
-        "state": Pane(Property(
-            content: [
-                (kind: Text("["), style: (fg: "yellow", modifiers: "Bold")),
-                (kind: Property(Status(StateV2())), style: (fg: "yellow", modifiers: "Bold")),
-                (kind: Text("]"), style: (fg: "yellow", modifiers: "Bold")),
-            ], align: Left,
-        )),
+        "state": 
+            Pane(Property(
+                content: [
+                    (kind: Text("["), style: (fg: "yellow", modifiers: "Bold")),
+                    (kind: Property(Status(StateV2())), style: (fg: "yellow", modifiers: "Bold")),
+                    (kind: Text("]"), style: (fg: "yellow", modifiers: "Bold")),
+                    (kind: Text("\n"), style: ()),
+                    (kind: Property(Status(Elapsed)), style: ()),
+                    (kind: Text(" / "), style: ()),
+                    (kind: Property(Status(Duration)), style: ()),
+                    (kind: Text(" ("), style: ()),
+                    (kind: Property(Status(Bitrate)), style: ()),
+                    (kind: Text(")"), style: ()),
+                ], align: Left,
+            )),
         "title": Pane(Property(
             content: [
                 (kind: Property(Song(Title)), style: (modifiers: "Bold"),
@@ -114,11 +122,11 @@
             (
                 size: "4",
                 borders: "ALL",
-                pane: Component("header"),
+                pane: Pane(Header),
             ),
             (
-                size: "3",
-                borders: "ALL",
+                size: "1",
+                // borders: "ALL",
                 pane: Pane(Tabs),
             ),
             (
@@ -127,11 +135,11 @@
                 background_color: "red",
                 pane: Pane(TabContent),
             ),
-            // (
-            //     size: "3",
-            //     borders: "ALL",
-            //     pane: Component("progress_bar"),
-            // ),
+            (
+                size: "1",
+                borders: "LEFT | RIGHT",
+                pane: Pane(ProgressBar),
+            ),
         ]
     ),
     header: (
