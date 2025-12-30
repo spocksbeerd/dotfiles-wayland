@@ -20,7 +20,12 @@ vim.lsp.config("lua_ls", {
                 globals = {
                     "vim"
                 }
-            }
+            };
+            workspace = {
+                library = {
+                    "${3rd}/love2d/library",
+                }
+            };
         }
     }
 })
