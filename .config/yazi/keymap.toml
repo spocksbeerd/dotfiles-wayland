@@ -13,11 +13,11 @@ keymap = [
     { on = "T",     run = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane" },
 
 	# Hopping
-	{ on = "k", run = "plugin arrow -1", desc = "Move cursor up" },
-	{ on = "j", run = "plugin arrow 1",  desc = "Move cursor down" },
+    { on = "k", run = "arrow prev", desc = "Previous file" },
+	{ on = "j", run = "arrow next", desc = "Next file" },
 
-	{ on = "<Up>",    run = "plugin arrow -1", desc = "Move cursor up" },
-	{ on = "<Down>",  run = "plugin arrow 1",  desc = "Move cursor down" },
+	{ on = "<Up>",   run = "arrow prev", desc = "Previous file" },
+	{ on = "<Down>", run = "arrow next", desc = "Next file" },
 
 	{ on = "<C-u>", run = "arrow -50%",  desc = "Move cursor up half page" },
 	{ on = "<C-d>", run = "arrow 50%",   desc = "Move cursor down half page" },
@@ -116,6 +116,7 @@ keymap = [
 	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
 	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Goto ~/.config" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
+    { on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },
@@ -172,15 +173,15 @@ keymap = [
 	{ on = "<Esc>", run = "close", desc = "Close the spot" },
 	{ on = "<Tab>", run = "close", desc = "Close the spot" },
 
-	{ on = "k", run = "arrow -1", desc = "Move cursor up" },
-	{ on = "j", run = "arrow 1",  desc = "Move cursor down" },
-	{ on = "h", run = "swipe -1", desc = "Swipe to the previous file" },
-	{ on = "l", run = "swipe 1",  desc = "Swipe to the next file" },
+    { on = "k", run = "arrow prev", desc = "Previous line" },
+	{ on = "j", run = "arrow next", desc = "Next line" },
+	{ on = "h", run = "swipe prev", desc = "Swipe to previous file" },
+	{ on = "l", run = "swipe next", desc = "Swipe to next file" },
 
-	{ on = "<Up>",    run = "arrow -1", desc = "Move cursor up" },
-	{ on = "<Down>",  run = "arrow 1",  desc = "Move cursor down" },
-	{ on = "<Left>",  run = "swipe -1", desc = "Swipe to the next file" },
-	{ on = "<Right>", run = "swipe 1",  desc = "Swipe to the previous file" },
+	{ on = "<Up>",    run = "arrow prev", desc = "Previous line" },
+	{ on = "<Down>",  run = "arrow next", desc = "Next line" },
+	{ on = "<Left>",  run = "swipe prev", desc = "Swipe to previous file" },
+	{ on = "<Right>", run = "swipe next", desc = "Swipe to next file" },
 
 	# Copy
 	{ on = [ "c", "c" ], run = "copy cell", desc = "Copy selected cell" },
