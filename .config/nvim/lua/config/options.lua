@@ -20,6 +20,6 @@ vim.o.shada            = ""
 vim.o.colorcolumn      = "80"
 vim.o.signcolumn       = "yes"
 vim.o.mouse            = "a"
--- vim.o.winborder        = "single"
+vim.o.winborder        = "rounded"
 vim.g.netrw_banner     = 0
 vim.g.netrw_dirhistmax = 0
