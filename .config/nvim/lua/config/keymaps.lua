@@ -6,7 +6,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 keymap("i", "jk", "<ESC>", opts)
--- keymap("n", "<leader>e", ":Ex<cr>", opts)
+keymap("n", "<leader>e", ":Ex<cr>", opts)
 
 vim.keymap.set('n', '<C-Up>',    ':resize +1<CR>', opts)
 vim.keymap.set('n', '<C-Down>',  ':resize -1<CR>', opts)
