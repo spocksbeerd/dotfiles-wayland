@@ -1,5 +1,16 @@
 return {
     {
+        "NeogitOrg/neogit",
+        lazy = true,
+        dependencies = {
+            "sindrets/diffview.nvim",
+        },
+        cmd = "Neogit",
+        keys = {
+            { "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" }
+        },
+    },
+    {
         "lewis6991/gitsigns.nvim",
         event = "VeryLazy",
         opts = {
@@ -42,5 +53,5 @@ return {
                 col = 1
             },
         }
-    },
+    }
 }

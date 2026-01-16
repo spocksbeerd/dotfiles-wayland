@@ -34,12 +34,6 @@ return {
             -- update parsers, if TSUpdate exists
             if vim.fn.exists(':TSUpdate') == 2 then vim.cmd('TSUpdate') end
         end,
-
-        -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-        ---@module 'nvim-treesitter'
-        ---@type TSConfig
-        ---@diagnostic disable-next-line: missing-fields
-
         config = function(_, _)
             local ensure_installed = {
                 'bash',
