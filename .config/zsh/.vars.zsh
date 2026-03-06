@@ -19,6 +19,7 @@ export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 export GOPATH="$XDG_DATA_HOME/go"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/bin/autolaunch"
