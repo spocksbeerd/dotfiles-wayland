@@ -2,7 +2,7 @@ return {
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
-        enabled = false,
+        enabled = true,
         dependencies = {
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
@@ -12,7 +12,14 @@ return {
         config = function ()
             vim.g.loaded_netrw = 1
             vim.g.loaded_netrwPlugin = 1
-            vim.keymap.set("n", "<leader>e", "<Cmd>Neotree position=current<CR>")
+            vim.keymap.set("n", "<leader>e", "<Cmd>Neotree position=float<CR>")
+            -- I need this because I'm using a custom background on everforest
+            vim.cmd([[
+                highlight NeoTreeFloatBorder guibg=#333C43
+                highlight NeoTreeFloatNormal guibg=#333C43
+                highlight NeoTreeNormal guibg=#333C43
+                highlight NeoTreeEndOfBuffer guibg=#333C43 
+            ]])
             require("neo-tree").setup({
                 close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
                 popup_border_style = "", -- or "" to use 'winborder' on Neovim v0.11+
@@ -127,7 +134,12 @@ return {
                 commands = {},
                 window = {
                     position = "current",
-                    width = 40,
+                    popup = {
+                        size = {
+                            height = "80%",
+                            width = "80%",
+                        }
+                    },
                     mapping_options = {
                         noremap = true,
                         nowait = true,
@@ -365,42 +377,4 @@ return {
             })
         end
     },
-    {
-        "nvim-tree/nvim-tree.lua",
-        version = "*",
-        lazy = false,
-        enabled = false,
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        },
-        config = function()
-            vim.g.loaded_netrw = 1
-            vim.g.loaded_netrwPlugin = 1
-            local function my_on_attach(bufnr)
-                local api = require "nvim-tree.api"
-                local function opts(desc)
-                    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-                end
-                api.config.mappings.default_on_attach(bufnr)
-                vim.keymap.set('n', '<C-t>', api.tree.change_root_to_parent, opts('Up'))
-                vim.keymap.set('n', '?',     api.tree.toggle_help,           opts('Help'))
-            end
-            require("nvim-tree").setup {
-                sort = {
-                    sorter = "case_sensitive",
-                },
-                view = {
-                    width = 100,
-                },
-                renderer = {
-                    group_empty = true,
-                },
-                filters = {
-                    dotfiles = true,
-                },
-                on_attach = my_on_attach,
-            }
-            vim.keymap.set('n', '<leader>e', ":NvimTreeToggle<CR>", {})
-        end,
-    }
 }

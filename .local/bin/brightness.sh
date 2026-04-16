@@ -2,14 +2,14 @@
 
 current_brightness=$(brightnessctl get)
 
-if [ "$current_brightness" -le 63 ]; then
+if [ "$current_brightness" -le 15612 ]; then
     brightnessctl set 25%
-elif [ "$current_brightness" -le 127 ]; then
+elif [ "$current_brightness" -le 31225 ]; then
     brightnessctl set 50%
-elif [ "$current_brightness" -le 190 ]; then
+elif [ "$current_brightness" -le 46837 ]; then
     brightnessctl set 75%
-elif [ "$current_brightness" -le 230 ]; then
+elif [ "$current_brightness" -le 62450 ]; then
     brightnessctl set 100%
-elif [ "$current_brightness" -le 255 ]; then
+elif [ "$current_brightness" -le 62451 ]; then
     brightnessctl set 5%
 fi
