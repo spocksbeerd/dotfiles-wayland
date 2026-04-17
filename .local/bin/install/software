@@ -1,5 +1,6 @@
 7zip
 amd-ucode
+amdgpu_top
 base
 base-devel
 bc
@@ -11,7 +12,6 @@ brightnessctl
 btop
 cliphist
 cmus
-cosmic-store
 dosfstools
 dysk
 efibootmgr
@@ -26,10 +26,12 @@ gammastep
 git
 github-cli
 grim
+gsl
 gst-plugin-pipewire
 gtk4
 gvfs
 htop
+hurl
 hypridle
 hyprland
 hyprlock
@@ -52,6 +54,7 @@ man-db
 man-pages
 mpc
 mpd
+mpd-mpris
 mpv
 nautilus
 neovim
@@ -61,6 +64,7 @@ noto-fonts
 noto-fonts-emoji
 noto-fonts-extra
 openssh
+ouch
 pamixer
 papirus-icon-theme
 pavucontrol
@@ -73,9 +77,13 @@ pipewire-pulse
 poppler
 qbittorrent
 qt5-imageformats
+qt6-imageformats
 qt5-wayland
 qt5ct
 qt6ct
+quickshell
+rainfrog
+raylib
 ripgrep
 rmpc
 rofi
@@ -107,3 +115,4 @@ zathura-pdf-mupdf
 zip
 zram-generator
 zsh
+zsh-completions
