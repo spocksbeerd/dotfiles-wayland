@@ -1,10 +1,10 @@
 return {
     {
         "williamboman/mason-lspconfig.nvim",
-        event = "VeryLazy",
         dependencies = {
             "neovim/nvim-lspconfig",
-        }
+        },
+        event = "VeryLazy",
     },
     {
         "williamboman/mason.nvim",
@@ -20,6 +20,7 @@ return {
     },
     {
         "folke/trouble.nvim",
+        event = "VeryLazy",
         config = function()
             require("trouble").setup();
             local opts = {}

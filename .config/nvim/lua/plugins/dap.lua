@@ -6,7 +6,8 @@ return {
             "theHamsta/nvim-dap-virtual-text",
             "leoluz/nvim-dap-go",
         },
-        lazy = false,
+        -- lazy = false,
+        event = "VeryLazy",
         config = function ()
             require("nvim-dap-virtual-text").setup()
             require("dap-go").setup()
@@ -56,13 +57,13 @@ return {
     -- nvim-dap-ui
     -- {
     --     "rcarriga/nvim-dap-ui",
-    --     event = "VeryLazy",
     --     dependencies = {
     --         "mfussenegger/nvim-dap",
     --         "leoluz/nvim-dap-go",
     --         "theHamsta/nvim-dap-virtual-text",
     --         "nvim-neotest/nvim-nio",
     --     },
+    --     event = "VeryLazy",
     --     config = function ()
     --         local dap = require("dap")
     --         local dap_go = require("dap-go")

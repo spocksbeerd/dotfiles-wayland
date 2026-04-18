@@ -28,8 +28,8 @@ vim.api.nvim_create_autocmd({ 'Filetype' }, {
 return {
     { -- Highlight, edit, and navigate code
         'nvim-treesitter/nvim-treesitter',
-        event = 'VeryLazy',
         branch = 'main',
+        event = 'VeryLazy',
         build = function()
             -- update parsers, if TSUpdate exists
             if vim.fn.exists(':TSUpdate') == 2 then vim.cmd('TSUpdate') end

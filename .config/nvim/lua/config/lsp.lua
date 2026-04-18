@@ -5,6 +5,7 @@ require("mason-lspconfig").setup {
         "clangd",
         "ts_ls",
         "emmet_language_server",
+        "bashls",
         -- "eslint",
         -- "rust_analyzer",
         -- "omnisharp",
