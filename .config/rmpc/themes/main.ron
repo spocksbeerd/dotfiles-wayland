@@ -132,7 +132,7 @@
             (
                 size: "100%",
                 borders: "ALL",
-                background_color: "red",
+                // background_color: "red",
                 pane: Pane(TabContent),
             ),
             (
