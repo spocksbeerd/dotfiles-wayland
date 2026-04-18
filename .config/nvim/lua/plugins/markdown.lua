@@ -2,6 +2,7 @@ return {
     {
         'MeanderingProgrammer/render-markdown.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
+        event = "VeryLazy",
         opts = {
             -- Whether markdown should be rendered by default.
             enabled = true,

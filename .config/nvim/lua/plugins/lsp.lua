@@ -31,4 +31,11 @@ return {
             vim.api.nvim_set_keymap("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", opts)
         end,
     },
+    {
+        "ray-x/lsp_signature.nvim",
+        event = "InsertEnter",
+        opts = {
+            hint_enable = false
+        },
+    }
 }
