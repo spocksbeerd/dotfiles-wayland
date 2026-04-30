@@ -70,6 +70,7 @@ vim.lsp.buf.signature_help = function()
 end
 
 vim.diagnostic.config({
+    -- virtual_lines = true,
     virtual_text = {
         prefix = "⚑", -- "▎", "■", "x", "●"
     },
